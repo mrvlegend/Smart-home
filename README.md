@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,7 @@
     </style>
 </head>
 <body>
-    <h1>Code Display and Copy</h1>
+    <h1>copy below code </h1>
     <div class="code-container">
         <button class="copy-btn" onclick="copyCode()">Copy</button>
         <pre id="code">
