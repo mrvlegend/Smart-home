@@ -125,6 +125,7 @@
                     <li>Send '6' to turn off Bulb 3</li>
                     <li>Send '7' to turn on the Fan</li>
                     <li>Send '8' to turn off the Fan</li>
+                                       <li>@mr_vlegend</li
                 </ul>
             </ul>
         </div>
