@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f4f3f4;
             margin: 0;
             padding: 0;
+            color: #ffd700;
         }
 
         header {
@@ -80,7 +81,7 @@
 </head>
 <body>
     <header>
-        <h1>Smart Home Showcase</h1>
+        <h3>Full details of smarthome</h3>
     </header>
 
     <main>
@@ -170,7 +171,7 @@ void loop() {
         </section>
 
         <footer>
-            <p>Developed by Your Name</p>
+            <p>By mr_vlegend</p>
         </footer>
     </main>
 
