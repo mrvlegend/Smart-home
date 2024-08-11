@@ -81,7 +81,7 @@
 </head>
 <body>
     <header>
-        <h3>Full details of smarthome</h3>
+       <center> <h3>Full details of smarthome</h3></center>
     </header>
 
     <main>
