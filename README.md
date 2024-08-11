@@ -145,7 +145,7 @@
 
             <button class="accordion">Arduino Code</button>
             <div class="panel">
-                <p>The Arduino code for this project. <a href="#" class="code-button" target="_blank">View Code</a></p>
+                <p>The Arduino code for this project. <a href="https://github.com/mrvlegend/Smart-home.git" class="code-button" target="_blank">View Code</a></p>
             </div>
 
             <button class="accordion">Using the System</button>
