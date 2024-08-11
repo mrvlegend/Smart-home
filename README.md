@@ -3,113 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful Code Display with Copy Button</title>
+    <title>Smart Home System with Arduino</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
+            color: #333;
         }
-        .code-container {
-            position: relative;
-            margin-bottom: 20px;
-            border: 2px solid #007bff;
+        h1, h2 {
+            color: #007bff;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
         }
-        .code-container pre {
-            background: #f8f8f2;
-            color: #007bff;
-            padding: 15px;
-            margin: 0;
-            overflow-x: auto;
-            border-radius: 8px 8px 0 0;
-            font-size: 16px;
-            font-family: 'Courier New', Courier, monospace;
+        .section {
+            margin-bottom: 20px;
         }
-        .copy-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #28a745;
+        .code-button {
+            display: inline-block;
+            background-color: #007bff;
             color: white;
             border: none;
-            padding: 8px 15px;
+            padding: 10px 20px;
             cursor: pointer;
             border-radius: 4px;
-            font-size: 14px;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
         }
-        .copy-button:hover {
-            background-color: #218838;
-        }
-        .code-container pre code {
-            display: block;
-            white-space: pre-wrap;
-            word-break: break-word;
+        .code-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-    <h1>Colorful Code Display Example</h1>
-  <h1>Components Needed:</h1>
-<p> Bluetooth Module: Such as HC-05 or HC-06 (for communication).
-Microcontroller: Arduino, ESP32, or similar (for controlling devices).
-Smart Devices: Relays, sensors, or other smart home devices you want to control.
-Smartphone or PC: To send Bluetooth commands.
-Power Supply: For the microcontroller and modules.</p>
-HC-05/HC-06   Arduino
----------------------
-VCC           -> 5V
-GND           -> GND
-TXD           -> RX (Pin 0)
-RXD           -> TX (Pin 1)
-HC-05/HC-06   ESP32
----------------------
-VCC           -> 3.3V
-GND           -> GND
-TXD           -> RX (GPIO 16)
-RXD           -> TX (GPIO 17)
+    <div class="container">
+        <h1>Smart Home System with Arduino</h1>
+        
+        <div class="section">
+            <h2>Overview</h2>
+            <p>This guide provides instructions for setting up a basic smart home system using an Arduino. You will control three light bulbs and one fan via Bluetooth.</p>
+        </div>
 
-    <div class="code-container">
-        <button class="copy-button" onclick="copyToClipboard()">Copy</button>
-        <pre><code id="codeBlock">
-#include <SoftwareSerial.h>
+        <div class="section">
+            <h2>Components Needed</h2>
+            <ul>
+                <li>Arduino board (e.g., Arduino Uno)</li>
+                <li>HC-05 Bluetooth module</li>
+                <li>Three relays</li>
+                <li>One fan</li>
+                <li>Three light bulbs</li>
+                <li>Jumper wires</li>
+                <li>Power supply</li>
+            </ul>
+        </div>
 
-SoftwareSerial bluetooth(10, 11); // RX, TX
-int ledPin = 9; // Pin connected to relay
+        <div class="section">
+            <h2>Connections</h2>
+            <p>Follow these steps to connect your components:</p>
+            <ul>
+                <li><strong>HC-05 Bluetooth Module:</strong>
+                    <ul>
+                        <li>VCC to 5V (Arduino)</li>
+                        <li>GND to Ground (Arduino)</li>
+                        <li>TXD to RX (Pin 0, Arduino)</li>
+                        <li>RXD to TX (Pin 1, Arduino)</li>
+                    </ul>
+                </li>
+                <li><strong>Relays:</strong>
+                    <ul>
+                        <li>Relay 1 IN to Pin 2 (Arduino) - Controls Bulb 1</li>
+                        <li>Relay 2 IN to Pin 3 (Arduino) - Controls Bulb 2</li>
+                        <li>Relay 3 IN to Pin 4 (Arduino) - Controls Bulb 3</li>
+                        <li>Relay 4 IN to Pin 5 (Arduino) - Controls Fan</li>
+                    </ul>
+                </li>
+                <li><strong>Devices:</strong>
+                    <ul>
+                        <li>Connect each bulb to the COM and NO pins of Relays 1, 2, and 3.</li>
+                        <li>Connect the fan to the COM and NO pins of Relay 4.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-void setup() {
-    bluetooth.begin(9600); // Initialize Bluetooth serial
-    pinMode(ledPin, OUTPUT); // Set LED pin as output
-}
+        <div class="section">
+            <h2>Arduino Code</h2>
+            <p>The Arduino code controls the smart home system by receiving commands from the Bluetooth module. To obtain the Arduino code, click the button below:</p>
+            <a href="https://example.com/arduino-code" class="code-button" target="_blank">View Arduino Code</a>
+        </div>
 
-void loop() {
-    if (bluetooth.available()) {
-        char command = bluetooth.read(); // Read command from Bluetooth
-
-        if (command == '1') {
-            digitalWrite(ledPin, HIGH); // Turn on device
-        } else if (command == '0') {
-            digitalWrite(ledPin, LOW); // Turn off device
-        }
-    }
-}
-
-        </code></pre>
+        <div class="section">
+            <h2>Using the System</h2>
+            <p>To control the devices:</p>
+            <ul>
+                <li>Pair your smartphone with the HC-05 Bluetooth module.</li>
+                <li>Use a Bluetooth terminal app or custom app to send commands:</li>
+                <ul>
+                    <li>Send '1' to turn on Bulb 1</li>
+                    <li>Send '2' to turn off Bulb 1</li>
+                    <li>Send '3' to turn on Bulb 2</li>
+                    <li>Send '4' to turn off Bulb 2</li>
+                    <li>Send '5' to turn on Bulb 3</li>
+                    <li>Send '6' to turn off Bulb 3</li>
+                    <li>Send '7' to turn on the Fan</li>
+                    <li>Send '8' to turn off the Fan</li>
+                </ul>
+            </ul>
+        </div>
     </div>
-
-    <script>
-        function copyToClipboard() {
-            const code = document.getElementById('codeBlock').innerText;
-            navigator.clipboard.writeText(code).then(() => {
-                alert('Code copied to clipboard!');
-            }).catch(err => {
-                console.error('Failed to copy code: ', err);
-            });
-        }
-    </script>
 
 </body>
 </html>
