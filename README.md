@@ -79,6 +79,7 @@
             outline: none;
             font-size: 16px;
             transition: 0.4s;
+            border-radius: 4px;
         }
         .active, .accordion:hover {
             background-color: #0056b3;
@@ -95,16 +96,17 @@
             const target = event.currentTarget;
             target.classList.toggle('active');
             const panel = target.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.accordion').forEach(button => {
+                button.addEventListener('click', toggleAccordion);
+            });
+        });
     </script>
 </head>
 <body>
-
     <header>
         <h1>Arduino Projects Showcase</h1>
     </header>
@@ -117,9 +119,11 @@
     </nav>
 
     <div class="container">
+        <!-- Project 1 -->
         <div id="project1" class="section">
             <h2 class="project-title">Smart Home System with Arduino</h2>
             <p>This project demonstrates a basic smart home system using an Arduino to control light bulbs and a fan via Bluetooth.</p>
+
             <button class="accordion">Components Needed</button>
             <div class="panel">
                 <ul>
@@ -132,6 +136,7 @@
                     <li>Power supply</li>
                 </ul>
             </div>
+
             <button class="accordion">Connections</button>
             <div class="panel">
                 <p>Follow these steps to connect your components:</p>
@@ -160,10 +165,12 @@
                     </li>
                 </ul>
             </div>
+
             <button class="accordion">Arduino Code</button>
             <div class="panel">
                 <p>The Arduino code controls the smart home system. <a href="https://github.com/mrvlegend/Smart-home.git" class="code-button" target="_blank">View Code</a></p>
             </div>
+
             <button class="accordion">Using the System</button>
             <div class="panel">
                 <p>To control the devices:</p>
@@ -184,22 +191,35 @@
             </div>
         </div>
 
-        <!-- Repeat similar sections for other projects -->
+        <!-- Project 2 -->
         <div id="project2" class="section">
             <h2 class="project-title">Another Project Title</h2>
-            <!-- Project details go here -->
+            <p>Details about the second project go here.</p>
         </div>
 
+        <!-- Project 3 -->
         <div id="project3" class="section">
             <h2 class="project-title">Yet Another Project Title</h2>
-            <!-- Project details go here -->
+            <p>Details about the third project go here.</p>
         </div>
 
+        <!-- Project 4 -->
         <div id="project4" class="section">
             <h2 class="project-title">Final Project Title</h2>
-            <!-- Project details go here -->
+            <p>Details about the fourth project go here.</p>
         </div>
     </div>
+
+    <script>
+        // JavaScript for accordion functionality
+        document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 
 </body>
 </html>
