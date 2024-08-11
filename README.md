@@ -107,7 +107,7 @@
         <div class="section">
             <h2>Arduino Code</h2>
             <p>The Arduino code controls the smart home system by receiving commands from the Bluetooth module. To obtain the Arduino code, click the button below:</p>
-            <a href="" class="code-button" target="_blank">View Arduino Code</a>
+            <a href="https://github.com/mrvlegend/Smart-home.git" class="code-button" target="_blank">View smart home Code for Arduino </a>
         </div>
 
         <div class="section">
