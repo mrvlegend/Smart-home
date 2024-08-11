@@ -13,7 +13,7 @@
 
     <main>
         <section class="image-section">
-            <img src="smart-home.jpg" alt="Smart Home" class="smart-home-image">
+            <img src="https://images.unsplash.com/photo-1587996401562-7760384b2f4d" alt="Smart Home" class="smart-home-image">
         </section>
 
         <section class="code-section">
@@ -115,5 +115,8 @@ void loop() {
             } catch (err) {
                 alert('Failed to copy code.');
             }
-            window.getSelection().removeAllRanges
-            
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+</body>
+</html>
