@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f5f5f5;
+            background-color: #f0f0f0;
             color: #333;
         }
         h1, h2 {
@@ -17,13 +17,18 @@
         .container {
             max-width: 800px;
             margin: auto;
-            background: white;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
         .section {
             margin-bottom: 20px;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .code-button {
             display: inline-block;
@@ -36,9 +41,14 @@
             text-align: center;
             font-size: 16px;
             text-decoration: none;
+            transition: background-color 0.3s;
         }
         .code-button:hover {
             background-color: #0056b3;
+        }
+        .code-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
         }
     </style>
 </head>
@@ -97,7 +107,7 @@
         <div class="section">
             <h2>Arduino Code</h2>
             <p>The Arduino code controls the smart home system by receiving commands from the Bluetooth module. To obtain the Arduino code, click the button below:</p>
-            <a href="https://example.com/arduino-code" class="code-button" target="_blank">View Arduino Code</a>
+            <a href="" class="code-button" target="_blank">View Arduino Code</a>
         </div>
 
         <div class="section">
