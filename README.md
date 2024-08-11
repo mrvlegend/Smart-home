@@ -56,7 +56,6 @@
 
     <div class="code-container">
         <button class="copy-button" onclick="copyToClipboard()">Copy</button>
-        <pre><code id="codeBlock">
         #include <SoftwareSerial.h>
 
 // Set up Bluetooth serial communication
@@ -133,7 +132,6 @@ void loop() {
 }
         
 
-        </code></pre>
     </div>
 
     <script>
