@@ -67,7 +67,7 @@
             <ul>
                 <li>Arduino board (e.g., Arduino Uno)</li>
                 <li>HC-05 Bluetooth module</li>
-                <li>Three relays</li>
+                <li>relay module</li>
                 <li>One fan</li>
                 <li>Three light bulbs</li>
                 <li>Jumper wires</li>
