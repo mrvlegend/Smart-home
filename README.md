@@ -55,7 +55,7 @@
 <body>
 
     <div class="container">
-        <h1>Smart Home System with Arduino by mr_vlegned</h1>
+        <h1>Smart Home System with Arduino by mr_vlegend</h1>
         
         <div class="section">
             <h2>Overview</h2>
