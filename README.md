@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -194,8 +194,7 @@ void loop() {
         }
     }
 }
-            </code></pre>
-        </section>
+            
 
         <section id="testing">
             <h2>Testing the System</h2>
@@ -212,10 +211,9 @@ void loop() {
             </ul>
         </section>
     </main>
-    <footer>
+    
         <p>&copy; 2024 Smart Home Projects</p>
-    </footer>
+    
     <script src="scripts.js"></script>
-    <center><h2>By mr_vlegend</h2></center>
-</body>
-</html>
+ <footer><bottom >  <center><h2>By mr_vlegend</h2></center></footer></bottom>
+
