@@ -1,161 +1,69 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home Setup Guide</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Code Display with Copy Button</title>
     <style>
-        /* Add basic styling for the copy button */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .code-container {
+            position: relative;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .code-container pre {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            border-radius: 4px 4px 0 0;
+        }
         .copy-button {
-            background-color: #4CAF50;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
             color: white;
             border: none;
-            padding: 10px 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 5px 0;
+            padding: 5px 10px;
             cursor: pointer;
+            border-radius: 4px;
         }
         .copy-button:hover {
-            background-color: #45a049;
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Smart Home Setup Guide with Arduino and Bluetooth</h1>
-    </header>
-    <main>
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Learn how to create a smart home system controlled via Bluetooth using Arduino.</p>
-        </section>
 
-        <section id="components">
-            <h2>Components Needed</h2>
-            <ul>
-                <li>Arduino Board</li>
-                <li>HC-05 Bluetooth Module</li>
-                <li>Relay Module</li>
-                <li>Power Supply</li>
-                <li>Various Home Appliances (Lights, Fans, etc.)</li>
-            </ul>
-        </section>
+    <h1>Code Display Example</h1>
 
-        <section id="wiring">
-            <h2>Wiring Diagram</h2>
-            <img src="wiring-diagram.png" alt="Wiring Diagram">
-            <p>Connect the HC-05 module to the Arduino as follows:</p>
-            <ul>
-                <li>HC-05 TX to Arduino RX</li>
-                <li>HC-05 RX to Arduino TX</li>
-                <li>HC-05 VCC to Arduino 5V</li>
-                <li>HC-05 GND to Arduino GND</li>
-            </ul>
-        </section>
-
-        <section id="arduino-code">
-            <h2>Arduino Code</h2>
-            <button class="copy-button" onclick="copyCode()">Copy Code</button>
-            <pre><code id="arduino-code-snippet">
-#include <SoftwareSerial.h>
-
-// Set up Bluetooth serial communication
-SoftwareSerial bluetooth(10, 11); // RX, TX
-
-// Pin definitions
-const int ledPin1 = 2; // LED 1
-const int ledPin2 = 3; // LED 2
-const int ledPin3 = 4; // LED 3
-const int fanPin = 5;  // Relay control for the fan
-
-void setup() {
- // Start serial communication with the computer and Bluetooth module
- Serial.begin(9600);
- bluetooth.begin(9600);
-
- // Set LED and relay pins as outputs
- pinMode(ledPin1, OUTPUT);
- pinMode(ledPin2, OUTPUT);
- pinMode(ledPin3, OUTPUT);
- pinMode(fanPin, OUTPUT);
-
- // Initialize LEDs and fan to OFF
- digitalWrite(ledPin1, LOW);
- digitalWrite(ledPin2, LOW);
- digitalWrite(ledPin3, LOW);
- digitalWrite(fanPin, LOW); // Fan OFF
+    <div class="code-container">
+        <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+        <pre><code id="codeBlock">
+function greet(name) {
+    return `Hello, ${name}!`;
 }
 
-void loop() {
- // Check if data is available from Bluetooth
- if (bluetooth.available()) {
-     char command = bluetooth.read();
-     
-     // Process the received command
-     switch (command) {
-         case '1': // Turn on LED 1
-             digitalWrite(ledPin1, HIGH);
-             bluetooth.print("LED 1 ON\n");
-             break;
-         case '2': // Turn off LED 1
-             digitalWrite(ledPin1, LOW);
-             bluetooth.print("LED 1 OFF\n");
-             break;
-         case '3': // Turn on LED 2
-             digitalWrite(ledPin2, HIGH);
-             bluetooth.print("LED 2 ON\n");
-             break;
-         case '4': // Turn off LED 2
-             digitalWrite(ledPin2, LOW);
-             bluetooth.print("LED 2 OFF\n");
-             break;
-         case '5': // Turn on LED 3
-             digitalWrite(ledPin3, HIGH);
-             bluetooth.print("LED 3 ON\n");
-             break;
-         case '6': // Turn off LED 3
-             digitalWrite(ledPin3, LOW);
-             bluetooth.print("LED 3 OFF\n");
-             break;
-         case 'F': // Turn on Fan
-             digitalWrite(fanPin, HIGH);
-             bluetooth.print("Fan ON\n");
-             break;
-         case 'f': // Turn off Fan
-             digitalWrite(fanPin, LOW);
-             bluetooth.print("Fan OFF\n");
-             break;
-         default:
-             bluetooth.print("Unknown command\n");
-             break;
-     }
- }
-}
-            </code></pre>
-        </section>
+console.log(greet('World'));
+        </code></pre>
+    </div>
 
-        <section id="testing">
-            <h2>Testing the System</h2>
-            <p>Pair your Bluetooth device with your smartphone and use a Bluetooth terminal app to send commands to the Arduino.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Smart Home Guide. All rights reserved.</p>
-    </footer>
     <script>
-        function copyCode() {
-            const code = document.getElementById('arduino-code-snippet').textContent;
+        function copyToClipboard() {
+            const code = document.getElementById('codeBlock').innerText;
             navigator.clipboard.writeText(code).then(() => {
                 alert('Code copied to clipboard!');
             }).catch(err => {
-                console.error('Error copying text: ', err);
+                console.error('Failed to copy code: ', err);
             });
         }
     </script>
+
 </body>
 </html>
