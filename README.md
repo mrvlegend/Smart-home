@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #4CAF50;
+            background-color:#000000 ;
             color: white;
             text-align: center;
             padding: 1em 0;
@@ -45,7 +45,7 @@
         }
 
         pre {
-            background-color: #f1f1f1;
+            background-color: #ff1f1;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 10px;
@@ -69,7 +69,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: #555;
             color: white;
             text-align: center;
             padding: 10px;
