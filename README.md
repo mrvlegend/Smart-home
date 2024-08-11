@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -106,10 +106,10 @@
 <body>
 
     <header>
-        <h1>Arduino Projects by mr_vlegend</h1>
+        <h1>Arduino Projects Showcase</h1>
     </header>
 
-    <nav>g
+    <nav>
         <a href="#project1">Project 1</a>
         <a href="#project2">Project 2</a>
         <a href="#project3">Project 3</a>
