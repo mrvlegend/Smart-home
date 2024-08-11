@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,8 +19,8 @@
             background-color: #fff;
         }
         .code-container pre {
-            background: #2e2e2e;
-            color: #f8f8f2;
+            background: #f8f8f2;
+            color: #007bff;
             padding: 15px;
             margin: 0;
             overflow-x: auto;
@@ -53,85 +53,51 @@
 <body>
 
     <h1>Colorful Code Display Example</h1>
+  <h1>Components Needed:</h1>
+<p> Bluetooth Module: Such as HC-05 or HC-06 (for communication).
+Microcontroller: Arduino, ESP32, or similar (for controlling devices).
+Smart Devices: Relays, sensors, or other smart home devices you want to control.
+Smartphone or PC: To send Bluetooth commands.
+Power Supply: For the microcontroller and modules.</p>
+HC-05/HC-06   Arduino
+---------------------
+VCC           -> 5V
+GND           -> GND
+TXD           -> RX (Pin 0)
+RXD           -> TX (Pin 1)
+HC-05/HC-06   ESP32
+---------------------
+VCC           -> 3.3V
+GND           -> GND
+TXD           -> RX (GPIO 16)
+RXD           -> TX (GPIO 17)
 
     <div class="code-container">
         <button class="copy-button" onclick="copyToClipboard()">Copy</button>
-        #include <SoftwareSerial.h>
+        <pre><code id="codeBlock">
+#include <SoftwareSerial.h>
 
-// Set up Bluetooth serial communication
 SoftwareSerial bluetooth(10, 11); // RX, TX
-
-// Pin definitions
-const int ledPin1 = 2; // LED 1
-const int ledPin2 = 3; // LED 2
-const int ledPin3 = 4; // LED 3
-const int fanPin = 5;  // Relay control for the fan
+int ledPin = 9; // Pin connected to relay
 
 void setup() {
-    // Start serial communication with the computer and Bluetooth module
-    Serial.begin(9600);
-    bluetooth.begin(9600);
-
-    // Set LED and relay pins as outputs
-    pinMode(ledPin1, OUTPUT);
-    pinMode(ledPin2, OUTPUT);
-    pinMode(ledPin3, OUTPUT);
-    pinMode(fanPin, OUTPUT);
-
-    // Initialize LEDs and fan to OFF
-    digitalWrite(ledPin1, LOW);
-    digitalWrite(ledPin2, LOW);
-    digitalWrite(ledPin3, LOW);
-    digitalWrite(fanPin, LOW); // Fan OFF
+    bluetooth.begin(9600); // Initialize Bluetooth serial
+    pinMode(ledPin, OUTPUT); // Set LED pin as output
 }
 
 void loop() {
-    // Check if data is available from Bluetooth
     if (bluetooth.available()) {
-        char command = bluetooth.read();
-        
-        // Process the received command
-        switch (command) {
-            case '1': // Turn on LED 1
-                digitalWrite(ledPin1, HIGH);
-                bluetooth.print("LED 1 ON\n");
-                break;
-            case '2': // Turn off LED 1
-                digitalWrite(ledPin1, LOW);
-                bluetooth.print("LED 1 OFF\n");
-                break;
-            case '3': // Turn on LED 2
-                digitalWrite(ledPin2, HIGH);
-                bluetooth.print("LED 2 ON\n");
-                break;
-            case '4': // Turn off LED 2
-                digitalWrite(ledPin2, LOW);
-                bluetooth.print("LED 2 OFF\n");
-                break;
-            case '5': // Turn on LED 3
-                digitalWrite(ledPin3, HIGH);
-                bluetooth.print("LED 3 ON\n");
-                break;
-            case '6': // Turn off LED 3
-                digitalWrite(ledPin3, LOW);
-                bluetooth.print("LED 3 OFF\n");
-                break;
-            case 'F': // Turn on Fan
-                digitalWrite(fanPin, HIGH);
-                bluetooth.print("Fan ON\n");
-                break;
-            case 'f': // Turn off Fan
-                digitalWrite(fanPin, LOW);
-                bluetooth.print("Fan OFF\n");
-                break;
-            default:
-                bluetooth.print("Unknown command\n");
-                break;
+        char command = bluetooth.read(); // Read command from Bluetooth
+
+        if (command == '1') {
+            digitalWrite(ledPin, HIGH); // Turn on device
+        } else if (command == '0') {
+            digitalWrite(ledPin, LOW); // Turn off device
         }
     }
 }
-        
 
+        </code></pre>
     </div>
 
     <script>
