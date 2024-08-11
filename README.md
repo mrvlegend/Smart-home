@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,28 +43,8 @@
         <section id="arduino-code">
             <h2>Arduino Code</h2>
             <pre><code>
-#include <SoftwareSerial.h>
 
-SoftwareSerial BTSerial(10, 11); // RX | TX
-
-void setup() {
-    BTSerial.begin(9600);  // HC-05 Bluetooth module baud rate
-    Serial.begin(9600);    // Serial monitor baud rate
-}
-
-void loop() {
-    if (BTSerial.available()) {
-        char command = BTSerial.read();
-        if (command == '1') {
-            // Code to turn on the device
-            Serial.println("Device ON");
-        } else if (command == '0') {
-            // Code to turn off the device
-            Serial.println("Device OFF");
-        }
-    }
-}
-            </code></pre>
+              </code></pre>
         </section>
 
         <section id="testing">
@@ -86,5 +66,6 @@ void loop() {
         <p>&copy; 2024 Smart Home Projects</p>
     </footer>
     <script src="scripts.js"></script>
+    <center><h2>By mr_vlegend</h2></center>
 </body>
 </html>
