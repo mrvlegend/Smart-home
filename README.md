@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Home Setup Guide</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Add basic styling for the copy button */
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -42,7 +60,8 @@
 
         <section id="arduino-code">
             <h2>Arduino Code</h2>
-            <pre><code>
+            <button class="copy-button" onclick="copyCode()">Copy Code</button>
+            <pre><code id="arduino-code-snippet">
 #include <SoftwareSerial.h>
 
 // Set up Bluetooth serial communication
@@ -124,21 +143,19 @@ void loop() {
             <h2>Testing the System</h2>
             <p>Pair your Bluetooth device with your smartphone and use a Bluetooth terminal app to send commands to the Arduino.</p>
         </section>
-
-        <section id="troubleshooting">
-            <h2>Troubleshooting</h2>
-            <p>If you encounter issues, check the following:</p>
-            <ul>
-                <li>Ensure correct wiring connections.</li>
-                <li>Check the baud rate settings on both the Arduino and Bluetooth module.</li>
-                <li>Verify the Bluetooth pairing process.</li>
-            </ul>
-        </section>
     </main>
-
     <footer>
-        <h2>By mr_vlegend</h2>
-        <p>&copy; 2024 Smart Home Projects</p>
+        <p>&copy; 2024 Smart Home Guide. All rights reserved.</p>
     </footer>
+    <script>
+        function copyCode() {
+            const code = document.getElementById('arduino-code-snippet').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
