@@ -48,26 +48,6 @@
             color: #007bff;
             margin-top: 0;
         }
-        .code-button {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 4px;
-            text-align: center;
-            font-size: 16px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .code-button:hover {
-            background-color: #0056b3;
-        }
-        .code-button:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
-        }
         .accordion {
             background-color: #007bff;
             color: white;
@@ -79,7 +59,7 @@
             outline: none;
             font-size: 16px;
             transition: 0.4s;
-            border-radius: 4px;
+            margin: 5px 0;
         }
         .active, .accordion:hover {
             background-color: #0056b3;
@@ -92,16 +72,13 @@
         }
     </style>
     <script>
-        function toggleAccordion(event) {
-            const target = event.currentTarget;
-            target.classList.toggle('active');
-            const panel = target.nextElementSibling;
-            panel.style.display = panel.style.display === "block" ? "none" : "block";
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.accordion').forEach(button => {
-                button.addEventListener('click', toggleAccordion);
+                button.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const panel = this.nextElementSibling;
+                    panel.style.display = panel.style.display === "block" ? "none" : "block";
+                });
             });
         });
     </script>
@@ -112,15 +89,15 @@
     </header>
 
     <nav>
-        <a href="#project1">Project 1</a>
-        <a href="#project2">Project 2</a>
-        <a href="#project3">Project 3</a>
-        <a href="#project4">Project 4</a>
+        <a href="#smartHome">Smart Home</a>
+        <a href="#obstacleAvoidingCar">Obstacle Avoiding Car</a>
+        <a href="#lineFollower">Line Follower</a>
+        <a href="#autoParkingCar">Auto Parking Car</a>
     </nav>
 
     <div class="container">
-        <!-- Project 1 -->
-        <div id="project1" class="section">
+        <!-- Smart Home System Project -->
+        <div id="smartHome" class="section">
             <h2 class="project-title">Smart Home System with Arduino</h2>
             <p>This project demonstrates a basic smart home system using an Arduino to control light bulbs and a fan via Bluetooth.</p>
 
@@ -139,9 +116,9 @@
 
             <button class="accordion">Connections</button>
             <div class="panel">
-                <p>Follow these steps to connect your components:</p>
+                <p>Connect your components as follows:</p>
                 <ul>
-                    <li><strong>HC-05 Bluetooth Module:</strong>
+                    <li>HC-05 Bluetooth Module:
                         <ul>
                             <li>VCC to 5V (Arduino)</li>
                             <li>GND to Ground (Arduino)</li>
@@ -149,7 +126,7 @@
                             <li>RXD to TX (Pin 1, Arduino)</li>
                         </ul>
                     </li>
-                    <li><strong>Relays:</strong>
+                    <li>Relays:
                         <ul>
                             <li>Relay 1 IN to Pin 2 (Arduino) - Controls Bulb 1</li>
                             <li>Relay 2 IN to Pin 3 (Arduino) - Controls Bulb 2</li>
@@ -157,7 +134,7 @@
                             <li>Relay 4 IN to Pin 5 (Arduino) - Controls Fan</li>
                         </ul>
                     </li>
-                    <li><strong>Devices:</strong>
+                    <li>Devices:
                         <ul>
                             <li>Connect each bulb to the COM and NO pins of Relays 1, 2, and 3.</li>
                             <li>Connect the fan to the COM and NO pins of Relay 4.</li>
@@ -168,58 +145,92 @@
 
             <button class="accordion">Arduino Code</button>
             <div class="panel">
-                <p>The Arduino code controls the smart home system. <a href="https://github.com/mrvlegend/Smart-home.git" class="code-button" target="_blank">View Code</a></p>
+                <p>The Arduino code for this project. <a href="#" class="code-button" target="_blank">View Code</a></p>
             </div>
 
             <button class="accordion">Using the System</button>
             <div class="panel">
-                <p>To control the devices:</p>
+                <p>To control the devices, pair your smartphone with the HC-05 Bluetooth module and use a Bluetooth terminal app to send commands:</p>
                 <ul>
-                    <li>Pair your smartphone with the HC-05 Bluetooth module.</li>
-                    <li>Use a Bluetooth terminal app or custom app to send commands:</li>
-                    <ul>
-                        <li>Send '1' to turn on Bulb 1</li>
-                        <li>Send '2' to turn off Bulb 1</li>
-                        <li>Send '3' to turn on Bulb 2</li>
-                        <li>Send '4' to turn off Bulb 2</li>
-                        <li>Send '5' to turn on Bulb 3</li>
-                        <li>Send '6' to turn off Bulb 3</li>
-                        <li>Send '7' to turn on the Fan</li>
-                        <li>Send '8' to turn off the Fan</li>
-                    </ul>
+                    <li>'1' to turn on Bulb 1</li>
+                    <li>'2' to turn off Bulb 1</li>
+                    <li>'3' to turn on Bulb 2</li>
+                    <li>'4' to turn off Bulb 2</li>
+                    <li>'5' to turn on Bulb 3</li>
+                    <li>'6' to turn off Bulb 3</li>
+                    <li>'7' to turn on the Fan</li>
+                    <li>'8' to turn off the Fan</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Project 2 -->
-        <div id="project2" class="section">
-            <h2 class="project-title">Another Project Title</h2>
-            <p>Details about the second project go here.</p>
+        <!-- Obstacle Avoiding Car Project -->
+        <div id="obstacleAvoidingCar" class="section">
+            <h2 class="project-title">Obstacle Avoiding Car</h2>
+            <p>This project involves building a car that can avoid obstacles using ultrasonic sensors.</p>
+
+            <button class="accordion">Components Needed</button>
+            <div class="panel">
+                <ul>
+                    <li>Arduino board (e.g., Arduino Uno)</li>
+                    <li>Ultrasonic sensor (HC-SR04)</li>
+                    <li>Motor driver module</li>
+                    <li>DC motors</li>
+                    <li>Wheels</li>
+                    <li>Battery pack</li>
+                    <li>Jumper wires</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Connections</button>
+            <div class="panel">
+                <p>Connect the components as follows:</p>
+                <ul>
+                    <li>Ultrasonic Sensor:
+                        <ul>
+                            <li>VCC to 5V (Arduino)</li>
+                            <li>GND to Ground (Arduino)</li>
+                            <li>TRIG to Pin 9 (Arduino)</li>
+                            <li>ECHO to Pin 10 (Arduino)</li>
+                        </ul>
+                    </li>
+                    <li>Motor Driver Module:
+                        <ul>
+                            <li>IN1 to Pin 3 (Arduino)</li>
+                            <li>IN2 to Pin 4 (Arduino)</li>
+                            <li>IN3 to Pin 5 (Arduino)</li>
+                            <li>IN4 to Pin 6 (Arduino)</li>
+                            <li>VCC and GND to Battery Pack</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="accordion">Arduino Code</button>
+            <div class="panel">
+                <p>The Arduino code for the obstacle avoiding car. <a href="#" class="code-button" target="_blank">View Code</a></p>
+            </div>
+
+            <button class="accordion">Using the System</button>
+            <div class="panel">
+                <p>Upload the code to the Arduino and power the car. It will start moving and avoiding obstacles autonomously.</p>
+            </div>
         </div>
 
-        <!-- Project 3 -->
-        <div id="project3" class="section">
-            <h2 class="project-title">Yet Another Project Title</h2>
-            <p>Details about the third project go here.</p>
-        </div>
+        <!-- Line Follower Project -->
+        <div id="lineFollower" class="section">
+            <h2 class="project-title">Line Follower Car</h2>
+            <p>This project involves creating a car that follows a line on the ground using infrared sensors.</p>
 
-        <!-- Project 4 -->
-        <div id="project4" class="section">
-            <h2 class="project-title">Final Project Title</h2>
-            <p>Details about the fourth project go here.</p>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript for accordion functionality
-        document.querySelectorAll('.accordion').forEach(button => {
-            button.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const panel = this.nextElementSibling;
-                panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-    </script>
-
-</body>
-</html>
+            <button class="accordion">Components Needed</button>
+            <div class="panel">
+                <ul>
+                    <li>Arduino board (e.g., Arduino Uno)</li>
+                    <li>IR sensors</li>
+                    <li>Motor driver module</li>
+                    <li>DC motors</li>
+                    <li>Wheels</li>
+                    <li>Battery pack</li>
+                    <li>Jumper wires</li>
+                </ul>
+            </
