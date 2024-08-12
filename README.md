@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,6 +69,16 @@
             overflow: hidden;
             background-color: white;
         }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 500px;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -78,6 +87,18 @@
                     this.classList.toggle('active');
                     const panel = this.nextElementSibling;
                     panel.style.display = panel.style.display === "block" ? "none" : "block";
+                });
+            });
+
+            document.getElementById('search-input').addEventListener('input', function() {
+                const filter = this.value.toLowerCase();
+                document.querySelectorAll('.section').forEach(section => {
+                    const title = section.querySelector('.project-title').textContent.toLowerCase();
+                    if (title.includes(filter)) {
+                        section.style.display = '';
+                    } else {
+                        section.style.display = 'none';
+                    }
                 });
             });
         });
@@ -89,15 +110,50 @@
     </header>
 
     <nav>
+        <!-- Navigation links can be updated dynamically if needed -->
         <a href="#smartHome">Smart Home</a>
         <a href="#obstacleAvoidingCar">Obstacle Avoiding Car</a>
         <a href="#lineFollower">Line Follower</a>
         <a href="#autoParkingCar">Auto Parking Car</a>
-        <a href""#upcom">k</a>
     </nav>
 
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-box" placeholder="Search for projects...">
+    </div>
+
     <div class="container">
-        <!-- Smart Home System Project -->
+        <!-- Project Template: Copy and update as needed -->
+        <div id="projectID" class="section">
+            <h2 class="project-title">Project Title</h2>
+            <p>Project description goes here.</p>
+
+            <button class="accordion">Components Needed</button>
+            <div class="panel">
+                <ul>
+                    <!-- List of components -->
+                </ul>
+            </div>
+
+            <button class="accordion">Connections</button>
+            <div class="panel">
+                <p>Connections instructions go here.</p>
+                <ul>
+                    <!-- List of connections -->
+                </ul>
+            </div>
+
+            <button class="accordion">Arduino Code</button>
+            <div class="panel">
+                <p>The Arduino code for this project. <a href="#" class="code-button" target="_blank">View Code</a></p>
+            </div>
+
+            <button class="accordion">Using the System</button>
+            <div class="panel">
+                <p>Instructions on how to use the system go here.</p>
+            </div>
+        </div>
+
+        <!-- Example Project Sections (Duplicate and update as needed) -->
         <div id="smartHome" class="section">
             <h2 class="project-title">Smart Home System with Arduino</h2>
             <p>This project demonstrates a basic smart home system using an Arduino to control light bulbs and a fan via Bluetooth.</p>
@@ -165,73 +221,8 @@
             </div>
         </div>
 
-        <!-- Obstacle Avoiding Car Project -->
-        <div id="obstacleAvoidingCar" class="section">
-            <h2 class="project-title">Obstacle Avoiding Car</h2>
-            <p>This project involves building a car that can avoid obstacles using ultrasonic sensors.</p>
+        <!-- Add more project sections here by copying and updating the template -->
+    </div>
+</body>
+</html>
 
-            <button class="accordion">Components Needed</button>
-            <div class="panel">
-                <ul>
-                    <li>Arduino board (e.g., Arduino Uno)</li>
-                    <li>Ultrasonic sensor (HC-SR04)</li>
-                    <li>Motor driver module</li>
-                    <li>DC motors</li>
-                    <li>Wheels</li>
-                    <li>Battery pack</li>
-                    <li>Jumper wires</li>
-                </ul>
-            </div>
-
-            <button class="accordion">Connections</button>
-            <div class="panel">
-                <p>Connect the components as follows:</p>
-                <ul>
-                    <li>Ultrasonic Sensor:
-                        <ul>
-                            <li>VCC to 5V (Arduino)</li>
-                            <li>GND to Ground (Arduino)</li>
-                            <li>TRIG to Pin 9 (Arduino)</li>
-                            <li>ECHO to Pin 10 (Arduino)</li>
-                        </ul>
-                    </li>
-                    <li>Motor Driver Module:
-                        <ul>
-                            <li>IN1 to Pin 3 (Arduino)</li>
-                            <li>IN2 to Pin 4 (Arduino)</li>
-                            <li>IN3 to Pin 5 (Arduino)</li>
-                            <li>IN4 to Pin 6 (Arduino)</li>
-                            <li>VCC and GND to Battery Pack</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <button class="accordion">Arduino Code</button>
-            <div class="panel">
-                <p>The Arduino code for the obstacle avoiding car. <a href="#" class="code-button" target="_blank">View Code</a></p>
-            </div>
-
-            <button class="accordion">Using the System</button>
-            <div class="panel">
-                <p>Upload the code to the Arduino and power the car. It will start moving and avoiding obstacles autonomously.</p>
-            </div>
-        </div>
-
-        <!-- Line Follower Project -->
-        <div id="lineFollower" class="section">
-            <h2 class="project-title">Line Follower Car</h2>
-            <p>This project involves creating a car that follows a line on the ground using infrared sensors.</p>
-
-            <button class="accordion">Components Needed</button>
-            <div class="panel">
-                <ul>
-                    <li>Arduino board (e.g., Arduino Uno)</li>
-                    <li>IR sensors</li>
-                    <li>Motor driver module</li>
-                    <li>DC motors</li>
-                    <li>Wheels</li>
-                    <li>Battery pack</li>
-                    <li>Jumper wires</li>
-                </ul>
-            </
