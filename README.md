@@ -313,7 +313,7 @@
         h2{
             font-family: sans-serif;
             font-size: 4rem;
-            color: #181a24;
+            color:  #FFA500;
             -webkit-text-stroke: 2px #383d52;
             text-transform: uppercase;
             width: 100%;
@@ -327,7 +327,7 @@
             width: 100%;
             height: 100%;
             position: absolute;
-            color: #0ef;
+            color: #FFA500;
             text-shadow: 0px 0px 12px #26f0fe;
             -webkit-text-stroke: 0px #383d52;
             border-right: 1px solid #0ef;
