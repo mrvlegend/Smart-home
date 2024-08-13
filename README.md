@@ -288,6 +288,89 @@
                 </ul>
             </div>
         </div>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Types</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border-width: 10px;
+            border-color: black;
+            margin: 45px;
+            display: inline-block;
+        }
+        .container :nth-child(1){
+            
+
+            border-style:dashed;
+
+
+        }
+        .container :nth-child(2){
+            
+            
+            border-style:dotted;
+        
+        
+        }
+        .container :nth-child(3){
+            
+            
+            border-style:double;
+        
+        
+        }
+        .container :nth-child(4){
+            
+            
+            border-style:groove;
+        
+        
+        }
+        .container :nth-child(5){
+            
+            
+            border-style:inset;
+        
+        
+        }
+        .container :nth-child(6){
+            
+            
+            border-style:outset;
+        
+        
+        }
+        .container :nth-child(7){
+            
+            
+            border-style:ridge;
+        
+        
+        }
+        .container :nth-child(8){
+            
+            
+            border-style:solid;
+        
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
     </div>
 </body>
 </html>
