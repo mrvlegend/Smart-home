@@ -350,7 +350,7 @@
 <body>
 
     <div class="box">
-        <h2 data-text="Animation...">Animation...</h2>
+        <center><h2 data-text="By mr_vlegend">Animation...</h2></center>
     </div>
     </div>
 </body>
