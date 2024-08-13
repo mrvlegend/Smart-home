@@ -307,7 +307,7 @@
         .box{
             width: fit-content;
             padding: 20px 50px;
-            background-color: black;
+            background-color: Orange;
             border: 1px solid white;
         }
         h2{
@@ -352,7 +352,7 @@
     <div class="box">
         <h2 data-text="By.mr_vlegend">By.mr_vlegend</h2>
     </div>
-    </div>
+    
 </body>
 </html>
 
