@@ -222,6 +222,72 @@
         </div>
 
         <!-- Add more project sections here by copying and updating the template -->
+ <div id="smartHome" class="section">
+            <h2 class="project-title">Smart Home System with Arduino</h2>
+            <p>This project demonstrates a basic smart home system using an Arduino to control light bulbs and a fan via Bluetooth.</p>
+
+            <button class="accordion">Components Needed</button>
+            <div class="panel">
+                <ul>
+                    <li>Arduino board (e.g., Arduino Uno)</li>
+                    <li>HC-05 Bluetooth module</li>
+                    <li>Relay module</li>
+                    <li>One fan</li>
+                    <li>Three light bulbs</li>
+                    <li>Jumper wires</li>
+                    <li>Power supply</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Connections</button>
+            <div class="panel">
+                <p>Connect your components as follows:</p>
+                <ul>
+                    <li>HC-05 Bluetooth Module:
+                        <ul>
+                            <li>VCC to 5V (Arduino)</li>
+                            <li>GND to Ground (Arduino)</li>
+                            <li>TXD to RX (Pin 0, Arduino)</li>
+                            <li>RXD to TX (Pin 1, Arduino)</li>
+                        </ul>
+                    </li>
+                    <li>Relays:
+                        <ul>
+                            <li>Relay 1 IN to Pin 2 (Arduino) - Controls Bulb 1</li>
+                            <li>Relay 2 IN to Pin 3 (Arduino) - Controls Bulb 2</li>
+                            <li>Relay 3 IN to Pin 4 (Arduino) - Controls Bulb 3</li>
+                            <li>Relay 4 IN to Pin 5 (Arduino) - Controls Fan</li>
+                        </ul>
+                    </li>
+                    <li>Devices:
+                        <ul>
+                            <li>Connect each bulb to the COM and NO pins of Relays 1, 2, and 3.</li>
+                            <li>Connect the fan to the COM and NO pins of Relay 4.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="accordion">Arduino Code</button>
+            <div class="panel">
+                <p>The Arduino code for this project. <a href="https://github.com/mrvlegend/Smart-home.git" class="code-button" target="_blank">View Code</a></p>
+            </div>
+
+            <button class="accordion">Using the System</button>
+            <div class="panel">
+                <p>To control the devices, pair your smartphone with the HC-05 Bluetooth module and use a Bluetooth terminal app to send commands:</p>
+                <ul>
+                    <li>'1' to turn on Bulb 1</li>
+                    <li>'2' to turn off Bulb 1</li>
+                    <li>'3' to turn on Bulb 2</li>
+                    <li>'4' to turn off Bulb 2</li>
+                    <li>'5' to turn on Bulb 3</li>
+                    <li>'6' to turn off Bulb 3</li>
+                    <li>'7' to turn on the Fan</li>
+                    <li>'8' to turn off the Fan</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
