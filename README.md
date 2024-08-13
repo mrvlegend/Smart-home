@@ -222,7 +222,7 @@
         </div>
 
         <!-- Add more project sections here by copying and updating the template -->
- <div id="smartHome" class="section">
+ <div id="Line Follower" class="section">
             <h2 class="project-title">Smart Home System with Arduino</h2>
             <p>This project demonstrates a basic smart home system using an Arduino to control light bulbs and a fan via Bluetooth.</p>
 
