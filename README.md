@@ -288,89 +288,70 @@
                 </ul>
             </div>
         </div>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Border Types</title>
+    <title>Text Animation</title>
     <style>
+        body{
+            margin: 0;
+            width: 100%; 
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+
         .box{
-            width: 100px;
-            height: 100px;
-            border-width: 10px;
-            border-color: black;
-            margin: 45px;
-            display: inline-block;
+            width: fit-content;
+            padding: 20px 50px;
+            background-color: black;
+            border: 1px solid white;
         }
-        .container :nth-child(1){
-            
+        h2{
+            font-family: sans-serif;
+            font-size: 4rem;
+            color: #181a24;
+            -webkit-text-stroke: 2px #383d52;
+            text-transform: uppercase;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
 
-            border-style:dashed;
+
+        h2::before{
+            content: attr(data-text);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            color: #0ef;
+            text-shadow: 0px 0px 12px #26f0fe;
+            -webkit-text-stroke: 0px #383d52;
+            border-right: 1px solid #0ef;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
+        }
+        
+        @keyframes animate {
+            0%,10%,100%{
+                width: 0;
+            }
+            70%,90%{
+                width: 100%;
+            }
 
 
-        }
-        .container :nth-child(2){
-            
-            
-            border-style:dotted;
-        
-        
-        }
-        .container :nth-child(3){
-            
-            
-            border-style:double;
-        
-        
-        }
-        .container :nth-child(4){
-            
-            
-            border-style:groove;
-        
-        
-        }
-        .container :nth-child(5){
-            
-            
-            border-style:inset;
-        
-        
-        }
-        .container :nth-child(6){
-            
-            
-            border-style:outset;
-        
-        
-        }
-        .container :nth-child(7){
-            
-            
-            border-style:ridge;
-        
-        
-        }
-        .container :nth-child(8){
-            
-            
-            border-style:solid;
-        
-        
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+
+    <div class="box">
+        <h2 data-text="Animation...">Animation...</h2>
+    </div>
     </div>
 </body>
 </html>
