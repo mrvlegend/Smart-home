@@ -163,13 +163,20 @@
     <div class="container">
         <!-- Project Template: Copy and update as needed -->
         <div id="projectID" class="section">
-            <h2 class="project-title">Project Title</h2>
-            <p>Project description goes here.</p>
+            <h2 class="line follower car">Project Title</h2>
+            <p>Creating a line follower car with Arduino involves both hardware and software components. Here's a step-by-step guide for building and coding a basic line-following robot.</p>
 
             <button class="accordion">Components Needed</button>
             <div class="panel">
                 <ul>
-                    <!-- List of components -->
+                <li>Arduino Board (e.g., Arduino Uno)</li>
+               <li> Motor Driver Module (e.g., L298N or L293D</li>
+               <li> DC Motors (2 motors)</li>
+                <li>line Sensors (Infrared sensors or reflectance sensors<li>
+                <li>Battery Pack</li>
+               <li> Jumper Wires</li>
+                <li>Chassis (to mount the components</li>
+
                 </ul>
             </div>
 
@@ -177,7 +184,25 @@
             <div class="panel">
                 <p>Connections instructions go here.</p>
                 <ul>
-                    <!-- List of connections -->
+               <li> Wiring Diagram</li>
+                <li>Motor Connections: </li>
+                <li>Connect the DC motors to the Motor Driver Module.</li>
+                <li>Connect the motor driver inputs to the Arduino digital pins.</li>
+                <li>Sensor Connections:</li>
+                <li>Connect the line sensors' output to the Arduino analog or digital pins.</li>
+                <li>Power Connections:</li>
+                <li>Power the Arduino from a suitable battery pack.</li>
+                <li>Ensure the motor driver is powered correctly.</li>
+               <li> Motor Driver Module Pins:
+                <li>Motor A:</li>
+                <li>IN1 to Arduino pin 2</li>
+                <li>IN2 to Arduino pin 3Motor B</li>
+                <li>IN3 to Arduino pin 4</li>
+                <li>IN4 to Arduino pin 5</li>
+                <li>Line Sensors:</li>
+                <li>Left Sensor:Analog pin A0</li>
+                <li>Right Sensor: Analog pin A1</li>
+                 
                 </ul>
             </div>
 
