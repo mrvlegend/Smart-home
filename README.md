@@ -1,27 +1,26 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Projects Showcase</title>
     <style>
-      body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: linear-gradient(to right, #e0f7fa, #b9fbc0, #ffe0b2, #ffccbc); /* Multi-color gradient */
-    background-size: 400% 400%; /* Extend background size for smooth animation */
-    color: #333; /* Dark text for readability */
-    animation: backgroundAnimation 15s ease infinite; /* Animation for background */
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #e0f7fa, #b9fbc0, #ffe0b2, #ffccbc); /* Multi-color gradient */
+            background-size: 400% 400%; /* Extend background size for smooth animation */
+            color: #333; /* Dark text for readability */
+            animation: backgroundAnimation 15s ease infinite; /* Animation for background */
+        }
 
-/* Keyframes for dynamic gradient animation */
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 0%; }
-    25% { background-position: 100% 0%; }
-    50% { background-position: 100% 100%; }
-    75% { background-position: 0% 100%; }
-    100% { background-position: 0% 0%; }
-}
-
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            25% { background-position: 100% 0%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 0%; }
+        }
 
         header {
             background-color: #FF4500; /* Darker orange */
@@ -145,7 +144,7 @@
 </head>
 <body>
     <header>
-        <img src="https://drive.google.com/file/d/1-AJPvetDc-ogNFqpYRpuWFEYsCtDC2kp/view?usp=sharing" alt="Your Logo">
+        <img src="https://your-image-url.com/logo.png" alt="Your Logo">
         <h1>Arduino Projects By Mr_vlegend</h1>
     </header>
 
@@ -163,20 +162,19 @@
     <div class="container">
         <!-- Project Template: Copy and update as needed -->
         <div id="projectID" class="section">
-            <h2 class="line follower car">Project Title</h2>
-            <p>Creating a line follower car with Arduino b</p>
+            <h2 class="project-title">Project Title</h2>
+            <p>Creating a line follower car with Arduino.</p>
 
             <button class="accordion">Components Needed</button>
             <div class="panel">
                 <ul>
-                <li>Arduino Board (e.g., Arduino Uno)</li>
-               <li> Motor Driver Module (e.g., L298N or L293D</li>
-               <li> DC Motors (2 motors)</li>
-                <li>line Sensors (Infrared sensors or reflectance sensors<li>
-                <li>Battery Pack</li>
-               <li> Jumper Wires</li>
-                <li>Chassis (to mount the components</li>
-
+                    <li>Arduino Board (e.g., Arduino Uno)</li>
+                    <li>Motor Driver Module (e.g., L298N or L293D)</li>
+                    <li>DC Motors (2 motors)</li>
+                    <li>Line Sensors (Infrared sensors or reflectance sensors)</li>
+                    <li>Battery Pack</li>
+                    <li>Jumper Wires</li>
+                    <li>Chassis (to mount the components)</li>
                 </ul>
             </div>
 
@@ -184,25 +182,39 @@
             <div class="panel">
                 <p>Connections instructions go here.</p>
                 <ul>
-                  <li> Wiring Diagram</li>
-                   <li>Motor Connections: </li>
-                  <li>Connect the DC motors to the Motor Driver Module.</li>
-                  < li>Connect the motor driver inputs to the Arduino digital pins.</li>
-                 <li>Sensor Connections:</li>
-                <li>Connect the line sensors' output to the Arduino analog or digital pins.</li>
-                <li>Power Connections:</li>
-                <li>Power the Arduino from a suitable battery pack.</li>
-                <li>Ensure the motor driver is powered correctly.</li>
-               <li> Motor Driver Module Pins:
-                <li>Motor A:</li>
-                <li>IN1 to Arduino pin 2</li>
-                <li>IN2 to Arduino pin 3Motor B</li>
-                <li>IN3 to Arduino pin 4</li>
-                <li>IN4 to Arduino pin 5</li>
-                <li>Line Sensors:</li>
-                <li>Left Sensor:Analog pin A0</li>
-                <li>Right Sensor: Analog pin A1</li>
-                 
+                    <li>Motor Connections:
+                        <ul>
+                            <li>Connect the DC motors to the Motor Driver Module.</li>
+                            <li>Connect the motor driver inputs to the Arduino digital pins.</li>
+                        </ul>
+                    </li>
+                    <li>Sensor Connections:
+                        <ul>
+                            <li>Connect the line sensors' output to the Arduino analog or digital pins.</li>
+                        </ul>
+                    </li>
+                    <li>Power Connections:
+                        <ul>
+                            <li>Power the Arduino from a suitable battery pack.</li>
+                            <li>Ensure the motor driver is powered correctly.</li>
+                        </ul>
+                    </li>
+                    <li>Motor Driver Module Pins:
+                        <ul>
+                            <li>Motor A:</li>
+                            <li>IN1 to Arduino pin 2</li>
+                            <li>IN2 to Arduino pin 3</li>
+                            <li>Motor B:</li>
+                            <li>IN3 to Arduino pin 4</li>
+                            <li>IN4 to Arduino pin 5</li>
+                        </ul>
+                    </li>
+                    <li>Line Sensors:
+                        <ul>
+                            <li>Left Sensor: Analog pin A0</li>
+                            <li>Right Sensor: Analog pin A1</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
@@ -320,4 +332,3 @@
     </div>
 </body>
 </html>
-
