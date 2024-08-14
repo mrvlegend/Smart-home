@@ -8,8 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #FFA500; /* Orange background */
-            color: #FFF; /* White text */
+            background-color: #FFFFFF; /* White background */
+            color: #333; /* Dark text for readability */
         }
         header {
             background-color: #FF4500; /* Darker orange */
@@ -43,7 +43,7 @@
         }
         .section {
             margin-bottom: 20px;
-            background: white;
+            background: #FFFFFF; /* White background for sections */
             color: #333; /* Dark text for contrast */
             border-radius: 8px;
             padding: 20px;
@@ -73,7 +73,7 @@
             padding: 0 18px;
             display: none;
             overflow: hidden;
-            background-color: white;
+            background-color: #FFFFFF; /* White background for panels */
         }
         .search-container {
             text-align: center;
