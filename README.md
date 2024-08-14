@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Projects Showcase</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #FFFFFF; /* White background */
-            color: #333; /* Dark text for readability */
-        }
+    <link rel="stylesheet" href="./style.css">
+   
         header {
             background-color: #FF4500; /* Darker orange */
             color: white;
@@ -116,16 +111,16 @@
 <body>
     <header>
         <img src="https://drive.google.com/file/d/1-AJPvetDc-ogNFqpYRpuWFEYsCtDC2kp/view?usp=sharing" alt="Your Logo">
-        <h1>Arduino Projects Showcase</h1>
+        <h1>Arduino Projects By Mr_vlegend</h1>
     </header>
-
+, n
     <nav>
         <a href="#smartHome">Smart Home</a>
         <a href="#obstacleAvoidingCar">Obstacle Avoiding Car</a>
         <a href="#lineFollower">Line Follower</a>
         <a href="#autoParkingCar">Auto Parking Car</a>
     </nav>
-
+nt3b  j
     <div class="search-container">
         <input type="text" id="search-input" class="search-box" placeholder="Search for projects...">
     </div>
