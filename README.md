@@ -17,6 +17,10 @@
             padding: 15px 0;
             text-align: center;
         }
+        header img {
+            max-width: 150px; /* Adjust as needed */
+            height: auto;
+        }
         nav {
             display: flex;
             justify-content: center;
@@ -111,6 +115,7 @@
 </head>
 <body>
     <header>
+        <img src="path-to-your-logo.png" alt="Your Logo">
         <h1>Arduino Projects Showcase</h1>
     </header>
 
@@ -225,7 +230,6 @@
             </div>
         </div>
 
-        <!-- Add more project sections here by copying and updating the template -->
         <div id="lineFollower" class="section">
             <h2 class="project-title">Line Follower</h2>
             <p>This project demonstrates a basic line-following robot using Arduino.</p>
@@ -237,5 +241,27 @@
                     <li>Motor driver module</li>
                     <li>Two DC motors</li>
                     <li>Line sensors</li>
-                    <li>Batteries</
+                    <li>Batteries</li>
+                </ul>
+            </div>
 
+            <button class="accordion">Connections</button>
+            <div class="panel">
+                <p>Connections instructions go here.</p>
+            </div>
+
+            <button class="accordion">Arduino Code</button>
+            <div class="panel">
+                <p>The Arduino code for this project. <a href="#" class="code-button" target="_blank">View Code</a></p>
+            </div>
+
+            <button class="accordion">Using the System</button>
+            <div class="panel">
+                <p>Instructions on how to use the system go here.</p>
+            </div>
+        </div>
+
+        <!-- Add more project sections here by copying and updating the template -->
+    </div>
+</body>
+</html>
