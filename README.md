@@ -1,23 +1,33 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Projects Showcase</title>
-    <link rel="stylesheet" href="./style.css">
-     <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #FFFFFF; /* White background */
+            background: linear-gradient(to right, #e0f7fa, #b9fbc0); /* Light gradient background */
             color: #333; /* Dark text for readability */
+            animation: backgroundAnimation 10s ease infinite; /* Animation for background */
         }
-   
+
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(to right, #e0f7fa, #b9fbc0); }
+            50% { background: linear-gradient(to right, #b9fbc0, #e0f7fa); }
+            100% { background: linear-gradient(to right, #e0f7fa, #b9fbc0); }
+        }
+
         header {
             background-color: #FF4500; /* Darker orange */
             color: white;
             padding: 15px 0;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure header stays on top */
         }
         header img {
             max-width: 150px; /* Adjust as needed */
@@ -27,6 +37,7 @@
             display: flex;
             justify-content: center;
             background: #FF4500; /* Darker orange */
+            margin-top: 60px; /* Space for fixed header */
         }
         nav a {
             color: white;
@@ -34,6 +45,7 @@
             text-decoration: none;
             text-align: center;
             font-size: 16px;
+            transition: background 0.3s; /* Smooth transition */
         }
         nav a:hover {
             background: #FF6347; /* Light red/orange */
@@ -42,6 +54,7 @@
             max-width: 1000px;
             margin: auto;
             padding: 20px;
+            margin-top: 80px; /* Space for fixed header and nav */
         }
         .section {
             margin-bottom: 20px;
@@ -50,6 +63,10 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .section:hover {
+            transform: scale(1.02); /* Slight zoom effect on hover */
         }
         .project-title {
             color: #FF4500; /* Darker orange */
@@ -65,7 +82,7 @@
             text-align: left;
             outline: none;
             font-size: 16px;
-            transition: 0.4s;
+            transition: background 0.4s ease; /* Smooth transition */
             margin: 5px 0;
         }
         .active, .accordion:hover {
@@ -89,6 +106,12 @@
         }
         .code-button {
             color: #FF4500; /* Darker orange */
+            text-decoration: none;
+            border-bottom: 1px dashed #FF4500; /* Dotted underline */
+        }
+        .code-button:hover {
+            color: #FF6347; /* Light red/orange */
+            border-bottom: 1px solid #FF6347; /* Solid underline on hover */
         }
     </style>
     <script>
@@ -120,14 +143,14 @@
         <img src="https://drive.google.com/file/d/1-AJPvetDc-ogNFqpYRpuWFEYsCtDC2kp/view?usp=sharing" alt="Your Logo">
         <h1>Arduino Projects By Mr_vlegend</h1>
     </header>
-, n
+
     <nav>
         <a href="#smartHome">Smart Home</a>
         <a href="#obstacleAvoidingCar">Obstacle Avoiding Car</a>
         <a href="#lineFollower">Line Follower</a>
         <a href="#autoParkingCar">Auto Parking Car</a>
     </nav>
-nt3b  j
+
     <div class="search-container">
         <input type="text" id="search-input" class="search-box" placeholder="Search for projects...">
     </div>
@@ -267,3 +290,4 @@ nt3b  j
     </div>
 </body>
 </html>
+
