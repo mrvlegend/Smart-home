@@ -4,19 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Projects Showcase</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(to right, #e0f7fa, #b9fbc0); /* Light gradient background */
-            color: #333; /* Dark text for readability */
-            animation: backgroundAnimation 10s ease infinite; /* Animation for background */
-        }
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #e0f7fa, #b9fbc0, #ffe0b2, #ffccbc); /* Multi-color gradient */
+    background-size: 400% 400%; /* Extend background size for smooth animation */
+    color: #333; /* Dark text for readability */
+    animation: backgroundAnimation 15s ease infinite; /* Animation for background */
+}
 
-        @keyframes backgroundAnimation {
-            0% { background: linear-gradient(to right, #e0f7fa, #b9fbc0); }
-            50% { background: linear-gradient(to right, #b9fbc0, #e0f7fa); }
-            100% { background: linear-gradient(to right, #e0f7fa, #b9fbc0); }
-        }
+/* Keyframes for dynamic gradient animation */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
 
         header {
             background-color: #FF4500; /* Darker orange */
