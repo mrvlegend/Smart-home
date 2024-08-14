@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Projects Showcase</title>
     <link rel="stylesheet" href="./style.css">
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #FFFFFF; /* White background */
+            color: #333; /* Dark text for readability */
+        }
    
         header {
             background-color: #FF4500; /* Darker orange */
