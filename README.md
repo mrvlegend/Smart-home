@@ -115,7 +115,7 @@
 </head>
 <body>
     <header>
-        <img src="path-to-your-logo.png" alt="Your Logo">
+        <img src="https://drive.google.com/file/d/1-AJPvetDc-ogNFqpYRpuWFEYsCtDC2kp/view?usp=sharing" alt="Your Logo">
         <h1>Arduino Projects Showcase</h1>
     </header>
 
