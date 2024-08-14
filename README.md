@@ -164,7 +164,7 @@
         <!-- Project Template: Copy and update as needed -->
         <div id="projectID" class="section">
             <h2 class="line follower car">Project Title</h2>
-            <p>Creating a line follower car with Arduino involves both hardware and software components. Here's a step-by-step guide for building and coding a basic line-following robot.</p>
+            <p>Creating a line follower car with Arduino b</p>
 
             <button class="accordion">Components Needed</button>
             <div class="panel">
@@ -184,11 +184,11 @@
             <div class="panel">
                 <p>Connections instructions go here.</p>
                 <ul>
-               <li> Wiring Diagram</li>
-                <li>Motor Connections: </li>
-                <li>Connect the DC motors to the Motor Driver Module.</li>
-                <li>Connect the motor driver inputs to the Arduino digital pins.</li>
-                <li>Sensor Connections:</li>
+                  <li> Wiring Diagram</li>
+                   <li>Motor Connections: </li>
+                  <li>Connect the DC motors to the Motor Driver Module.</li>
+                  < li>Connect the motor driver inputs to the Arduino digital pins.</li>
+                 <li>Sensor Connections:</li>
                 <li>Connect the line sensors' output to the Arduino analog or digital pins.</li>
                 <li>Power Connections:</li>
                 <li>Power the Arduino from a suitable battery pack.</li>
