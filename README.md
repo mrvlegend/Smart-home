@@ -123,6 +123,13 @@
             height: auto;    /* Maintain aspect ratio */
             
         }
+        shining-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a73e8;
+            text-align: center;
+            margin-top: 20px;
+            animation: shine 2s infinite linear, move 10s infinite linear;
         
         @keyframes shine {
             0% {
