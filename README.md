@@ -10,18 +10,18 @@
             font-family: 'Courier New', Courier, monospace; /* Monospace font for hacker feel */
             margin: 0;
             background: black; /* Solid black background for hacker theme */
-            color: #ff69b4; /* Neon pink text for classic hacker aesthetics */
+            color: #00ff00; /* Neon green text for classic hacker aesthetics */
             animation: backgroundAnimation 15s infinite linear; /* Animation for background */
         }
 
         @keyframes backgroundAnimation {
             0% { background-color: black; }
-            50% { background-color: #1e1e1e; }
+            50% { background-color: #002b36; }
             100% { background-color: black; }
         }
 
         header {
-            background-color: #ff69b4; /* Neon pink */
+            background-color: #00ff00; /* Neon green */
             color: black;
             padding: 15px 0;
             text-align: center;
@@ -30,7 +30,7 @@
             top: 0;
             left: 0;
             z-index: 1000; /* Ensure header stays on top */
-            border-bottom: 2px solid #ff1493; /* Deep neon pink border at the bottom */
+            border-bottom: 2px solid #005700; /* Deep green border at the bottom */
         }
         
         header img {
@@ -41,9 +41,9 @@
         nav {
             display: flex;
             justify-content: center;
-            background: #ff69b4; /* Neon pink */
+            background: #00ff00; /* Neon green */
             margin-top: 60px; /* Space for fixed header */
-            border-bottom: 2px solid #ff1493; /* Deep neon pink border at the bottom */
+            border-bottom: 2px solid #005700; /* Deep green border at the bottom */
         }
         
         nav a {
@@ -53,7 +53,7 @@
             text-align: center;
             font-size: 16px;
             transition: background 0.3s; /* Smooth transition */
-            border-left: 1px solid #ff1493; /* Deep neon pink border between links */
+            border-left: 1px solid #005700; /* Deep green border between links */
         }
         
         nav a:first-child {
@@ -61,7 +61,7 @@
         }
         
         nav a:hover {
-            background: #ff1493; /* Deep neon pink for hover effect */
+            background: #005700; /* Deep green for hover effect */
         }
         
         .container {
@@ -73,13 +73,13 @@
         
         .section {
             margin-bottom: 20px;
-            background: #222; /* Dark background for sections */
-            color: #ff69b4; /* Neon pink text for contrast */
+            background: #111; /* Dark background for sections */
+            color: #00ff00; /* Neon green text for contrast */
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(255, 105, 180, 0.5); /* Neon pink shadow */
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
             transition: transform 0.3s ease; /* Smooth transition for hover effect */
-            border: 2px solid #ff1493; /* Deep neon pink border */
+            border: 2px solid #005700; /* Deep green border */
         }
         
         .section:hover {
@@ -87,17 +87,17 @@
         }
         
         .project-title {
-            color: #ff69b4; /* Neon pink */
+            color: #00ff00; /* Neon green */
             margin-top: 0;
         }
         
         .accordion {
-            background-color: #ff69b4; /* Neon pink */
+            background-color: #00ff00; /* Neon green */
             color: black;
             cursor: pointer;
             padding: 10px;
             width: 100%;
-            border: 2px solid #ff1493; /* Deep neon pink border */
+            border: 2px solid #005700; /* Deep green border */
             text-align: left;
             outline: none;
             font-size: 16px;
@@ -106,14 +106,14 @@
         }
         
         .active, .accordion:hover {
-            background-color: #ff1493; /* Deep neon pink */
+            background-color: #005700; /* Deep green */
         }
         
         .panel {
             padding: 0 18px;
             display: none;
             overflow: hidden;
-            background-color: #222; /* Dark background for panels */
+            background-color: #111; /* Dark background for panels */
         }
         
         .search-container {
@@ -127,33 +127,33 @@
             width: 80%;
             max-width: 500px;
             background: black;
-            color: #ff69b4;
-            border: 2px solid #ff1493; /* Deep neon pink border */
+            color: #00ff00;
+            border: 2px solid #005700; /* Deep green border */
             border-radius: 5px;
         }
         
         .code-button {
-            color: #ff69b4; /* Neon pink */
+            color: #00ff00; /* Neon green */
             text-decoration: none;
-            border-bottom: 1px dashed #ff69b4; /* Dotted underline */
+            border-bottom: 1px dashed #00ff00; /* Dotted underline */
         }
         
         .code-button:hover {
-            color: #ff1493; /* Deep neon pink */
-            border-bottom: 1px solid #ff1493; /* Solid underline on hover */
+            color: #005700; /* Deep green */
+            border-bottom: 1px solid #005700; /* Solid underline on hover */
         }
         
         img {
             max-width: 25%; /* Scale image to fit its container */
             height: auto;    /* Maintain aspect ratio */
-            border: 2px solid #ff1493; /* Deep neon pink border around images */
+            border: 2px solid #005700; /* Deep green border around images */
             border-radius: 5px; /* Optional rounded corners */
         }
 
         .shining-text {
             font-size: 24px;
             font-weight: bold;
-            color: #ff69b4; /* Neon pink */
+            color: #00ff00; /* Neon green */
             text-align: center;
             margin-top: 20px;
             animation: shine 2s infinite linear, move 10s infinite linear;
@@ -161,10 +161,10 @@
 
         @keyframes shine {
             0% {
-                text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4;
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
             }
             100% {
-                text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4;
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
             }
         }
 
