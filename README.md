@@ -119,7 +119,7 @@
         }
         
         img {
-            max-width: 50%; /* Scale image to fit its container */
+            max-width: 25%; /* Scale image to fit its container */
             height: auto;    /* Maintain aspect ratio */
         }
     </style>
@@ -304,6 +304,8 @@
 
         <div id="lineFollower" class="section">
             <h2 class="project-title">Line Follower</h2>
+            <img src="https://i.ytimg.com/vi/t7k9D1jDEtk/maxresdefault.jpg" alt="Line Following Robot Diagram" style="width: 300px; height: auto;">
+
             <p>This project demonstrates a basic line-following robot using Arduino.</p>
 
             <button class="accordion">Components Needed</button>
