@@ -167,72 +167,115 @@
     <div class="container">
         <!-- Project Template: Copy and update as needed -->
         <div id="projectID" class="section">
-            <h2 class="project-title">Project Title</h2>
-            <p>Creating a line follower car with Arduino.</p>
+              <h2 class="project-title">Obstacle Avoiding Car</h2>
+    <p>This project demonstrates an obstacle-avoiding car using Arduino and ultrasonic sensors.</p>
 
-            <button class="accordion">Components Needed</button>
-            <div class="panel">
-                <ul>
-                    <li>Arduino Board (e.g., Arduino Uno)</li>
-                    <li>Motor Driver Module (e.g., L298N or L293D)</li>
-                    <li>DC Motors (2 motors)</li>
-                    <li>Line Sensors (Infrared sensors or reflectance sensors)</li>
-                    <li>Battery Pack</li>
-                    <li>Jumper Wires</li>
-                    <li>Chassis (to mount the components)</li>
-                </ul>
-            </div>
+    <button class="accordion">Components Needed</button>
+    <div class="panel">
+        <ul>
+            <li>Arduino Board (e.g., Arduino Uno)</li>
+            <li>Motor Driver Module (e.g., L298N or L293D)</li>
+            <li>DC Motors (2 motors)</li>
+            <li>Ultrasonic Sensor (e.g., HC-SR04)</li>
+            <li>Battery Pack</li>
+            <li>Jumper Wires</li>
+            <li>Chassis (to mount the components)</li>
+        </ul>
+    </div>
 
-            <button class="accordion">Connections</button>
-            <div class="panel">
-                <p>Connections instructions go here.</p>
+    <button class="accordion">Connections</button>
+    <div class="panel">
+        <p>Instructions for connecting the components are detailed below.</p>
+        <ul>
+            <li>Motor Connections:
                 <ul>
-                    <li>Motor Connections:
-                        <ul>
-                            <li>Connect the DC motors to the Motor Driver Module.</li>
-                            <li>Connect the motor driver inputs to the Arduino digital pins.</li>
-                        </ul>
-                    </li>
-                    <li>Sensor Connections:
-                        <ul>
-                            <li>Connect the line sensors' output to the Arduino analog or digital pins.</li>
-                        </ul>
-                    </li>
-                    <li>Power Connections:
-                        <ul>
-                            <li>Power the Arduino from a suitable battery pack.</li>
-                            <li>Ensure the motor driver is powered correctly.</li>
-                        </ul>
-                    </li>
-                    <li>Motor Driver Module Pins:
-                        <ul>
-                            <li>Motor A:</li>
-                            <li>IN1 to Arduino pin 2</li>
-                            <li>IN2 to Arduino pin 3</li>
-                            <li>Motor B:</li>
-                            <li>IN3 to Arduino pin 4</li>
-                            <li>IN4 to Arduino pin 5</li>
-                        </ul>
-                    </li>
-                    <li>Line Sensors:
-                        <ul>
-                            <li>Left Sensor: Analog pin A0</li>
-                            <li>Right Sensor: Analog pin A1</li>
-                        </ul>
-                    </li>
+                    <li>Connect the DC motors to the Motor Driver Module.</li>
+                    <li>Connect the motor driver inputs to the Arduino digital pins.</li>
                 </ul>
-            </div>
+            </li>
+            <li>Ultrasonic Sensor Connections:
+                <ul>
+                    <li>Connect the VCC of the sensor to the 5V pin on the Arduino.</li>
+                    <li>Connect the GND of the sensor to the GND pin on the Arduino.</li>
+                    <li>Connect the TRIG pin of the sensor to a digital pin on the Arduino (e.g., pin 6).</li>
+                    <li>Connect the ECHO pin of the sensor to a digital pin on the Arduino (e.g., pin 7).</li>
+                </ul>
+            </li>
+            <li>Power Connections:
+                <ul>
+                    <li>Power the Arduino from a suitable battery pack.</li>
+                    <li>Ensure the motor driver and sensors are powered correctly.</li>
+                </ul>
+            </li>
+            <li>Motor Driver Module Pins:
+                <ul>
+                    <li>Motor A:</li>
+                    <li>IN1 to Arduino pin 2</li>
+                    <li>IN2 to Arduino pin 3</li>
+                    <li>Motor B:</li>
+                    <li>IN3 to Arduino pin 4</li>
+                    <li>IN4 to Arduino pin 5</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Adding an example image related to obstacle avoidance -->
+    <h3>Obstacle Avoidance Diagram</h3>
 
             <button class="accordion">Arduino Code</button>
             <div class="panel">
                 <p>The Arduino code for this project. <a href="https://github.com/mrvlegend/line-follwer.git" class="code-button" target="_blank">View Code</a></p>
             </div>
 
-            <button class="accordion">Using the System</button>
-            <div class="panel">
-                <p>Instructions on how to use the system go here.</p>
-            </div>
-        </div>
+             <button class="accordion">Connections</button>
+    <div class="panel">
+        <p>Instructions for connecting the components are detailed below.</p>
+        <ul>
+            <li>Motor Connections:
+                <ul>
+                    <li>Connect the DC motors to the Motor Driver Module.</li>
+                    <li>Connect the motor driver inputs to the Arduino digital pins.</li>
+                </ul>
+            </li>
+            <li>Ultrasonic Sensor Connections:
+                <ul>
+                    <li>Connect the VCC of the sensor to the 5V pin on the Arduino.</li>
+                    <li>Connect the GND of the sensor to the GND pin on the Arduino.</li>
+                    <li>Connect the TRIG pin of the sensor to a digital pin on the Arduino (e.g., pin 6).</li>
+                    <li>Connect the ECHO pin of the sensor to a digital pin on the Arduino (e.g., pin 7).</li>
+                </ul>
+            </li>
+            <li>Power Connections:
+                <ul>
+                    <li>Power the Arduino from a suitable battery pack.</li>
+                    <li>Ensure the motor driver and sensors are powered correctly.</li>
+                </ul>
+            </li>
+            <li>Motor Driver Module Pins:
+                <ul>
+                    <li>Motor A:</li>
+                    <li>IN1 to Arduino pin 2</li>
+                    <li>IN2 to Arduino pin 3</li>
+                    <li>Motor B:</li>
+                    <li>IN3 to Arduino pin 4</li>
+                    <li>IN4 to Arduino pin 5</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <button class="accordion">Using the System</button>
+    <div class="panel">
+        <p>Instructions on how to use the system go here. This section typically includes information on operating the obstacle-avoiding car, such as:</p>
+        <ul>
+            <li>Powering on the system.</li>
+            <li>Placing the car on a flat surface.</li>
+            <li>Starting the car and observing its behavior.</li>
+            <li>Understanding how the car detects obstacles and changes direction.</li>
+            <li>How to troubleshoot common issues.</li>
+        </ul>
+    </div>
 
         <!-- Example Project Sections (Duplicate and update as needed) -->
         <div id="smartHome" class="section">
@@ -317,7 +360,7 @@
                     <li>Line sensors</li>
                     <li>Batteries</li>
                 </ul>
-                <img src="https://i.ytimg.com/vi/t7k9D1jDEtk/maxresdefault.jpg" alt="Line Following Robot Diagram">
+              <center>  <img src="https://i.ytimg.com/vi/t7k9D1jDEtk/maxresdefault.jpg" alt="Line Following Robot Diagram"></center>
             </div>
 
             <button class="accordion">Connections</button>
