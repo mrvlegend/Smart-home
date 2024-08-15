@@ -119,7 +119,7 @@
         }
         
         img {
-            max-width: 100%; /* Scale image to fit its container */
+            max-width: 50%; /* Scale image to fit its container */
             height: auto;    /* Maintain aspect ratio */
         }
     </style>
@@ -225,7 +225,7 @@
 
             <button class="accordion">Arduino Code</button>
             <div class="panel">
-                <p>The Arduino code for this project. <a href="#" class="code-button" target="_blank">View Code</a></p>
+                <p>The Arduino code for this project. <a href="https://github.com/mrvlegend/line-follwer.git" class="code-button" target="_blank">View Code</a></p>
             </div>
 
             <button class="accordion">Using the System</button>
