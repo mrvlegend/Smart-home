@@ -121,6 +121,25 @@
         img {
             max-width: 25%; /* Scale image to fit its container */
             height: auto;    /* Maintain aspect ratio */
+            
+        }
+        
+        @keyframes shine {
+            0% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1a73e8, 0 0 40px #1a73e8, 0 0 50px #1a73e8, 0 0 60px #1a73e8, 0 0 70px #1a73e8;
+            }
+            100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1a73e8, 0 0 40px #1a73e8, 0 0 50px #1a73e8, 0 0 60px #1a73e8, 0 0 70px #1a73e8;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
         }
     </style>
     <script>
@@ -457,5 +476,6 @@
                 <li>Troubleshoot any issues by checking sensor connections and power supply.</li>
             </ul>
         </div>
+        <div class="shining-text">by_mr_vlegend</div>
     </div>
 
