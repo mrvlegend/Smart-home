@@ -376,7 +376,7 @@
 
       <div id="atomicParkingCar" class="section">
         <h2 class="project-title">Atomic Parking Car</h2>
-        <img src="https://example.com/atomic-parking-car-diagram.jpg" alt="Atomic Parking Car Diagram" style="width: 300px; height: auto;">
+        
 
         <p>This project demonstrates an advanced parking car using Arduino with ultrasonic and proximity sensors.</p>
 
@@ -392,7 +392,7 @@
                 <li>Jumper wires</li>
                 <li>Chassis (to mount the components)</li>
             </ul>
-            <center><img src="https://example.com/atomic-parking-car-diagram.jpg" alt="Atomic Parking Car Diagram" class="small-img"></center>
+         
         </div>
 
         <button class="accordion">Connections</button>
@@ -458,5 +458,4 @@
             </ul>
         </div>
     </div>
-</body>
-</html>
+
