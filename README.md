@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             background: black; /* Solid black background for hacker theme */
-            color: #00ff00; /* Green text to simulate classic hacker aesthetics */
+            color: #ff00ff; /* Green text to simulate classic hacker aesthetics */
             animation: backgroundAnimation 10s infinite linear; /* Animation for background */
         }
 
