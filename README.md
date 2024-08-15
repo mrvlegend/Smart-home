@@ -117,6 +117,11 @@
             color: #FF6347; /* Light red/orange */
             border-bottom: 1px solid #FF6347; /* Solid underline on hover */
         }
+        
+        img {
+            max-width: 100%; /* Scale image to fit its container */
+            height: auto;    /* Maintain aspect ratio */
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
