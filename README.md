@@ -9,23 +9,20 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background: linear-gradient(to right, #e0f7fa, #b9fbc0, #ffe0b2, #ffccbc); /* Multi-color gradient */
-            background-size: 400% 400%; /* Extend background size for smooth animation */
-            color: #333; /* Dark text for readability */
-            animation: backgroundAnimation 15s ease infinite; /* Animation for background */
+            background: black; /* Solid black background for hacker theme */
+            color: #00ff00; /* Green text to simulate classic hacker aesthetics */
+            animation: backgroundAnimation 10s infinite linear; /* Animation for background */
         }
 
         @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-            25% { background-position: 100% 0%; }
-            50% { background-position: 100% 100%; }
-            75% { background-position: 0% 100%; }
-            100% { background-position: 0% 0%; }
+            0% { background-color: black; }
+            50% { background-color: #002b36; }
+            100% { background-color: black; }
         }
 
         header {
-            background-color: #FF4500; /* Darker orange */
-            color: white;
+            background-color: #00ff00; /* Neon green */
+            color: black;
             padding: 15px 0;
             text-align: center;
             position: fixed;
@@ -34,61 +31,61 @@
             left: 0;
             z-index: 1000; /* Ensure header stays on top */
         }
-
+        
         header img {
             max-width: 150px; /* Adjust as needed */
             height: auto;
         }
-
+        
         nav {
             display: flex;
             justify-content: center;
-            background: #FF4500; /* Darker orange */
+            background: #00ff00; /* Neon green */
             margin-top: 60px; /* Space for fixed header */
         }
-
+        
         nav a {
-            color: white;
+            color: black;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
             font-size: 16px;
             transition: background 0.3s; /* Smooth transition */
         }
-
+        
         nav a:hover {
-            background: #FF6347; /* Light red/orange */
+            background: #005700; /* Darker green for hover effect */
         }
-
+        
         .container {
             max-width: 1000px;
             margin: auto;
             padding: 20px;
             margin-top: 80px; /* Space for fixed header and nav */
         }
-
+        
         .section {
             margin-bottom: 20px;
-            background: #FFFFFF; /* White background for sections */
-            color: #333; /* Dark text for contrast */
+            background: #111; /* Dark background for sections */
+            color: #00ff00; /* Green text for contrast */
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
             transition: transform 0.3s ease; /* Smooth transition for hover effect */
         }
-
+        
         .section:hover {
             transform: scale(1.02); /* Slight zoom effect on hover */
         }
-
+        
         .project-title {
-            color: #FF4500; /* Darker orange */
+            color: #00ff00; /* Neon green */
             margin-top: 0;
         }
-
+        
         .accordion {
-            background-color: #FF4500; /* Darker orange */
-            color: white;
+            background-color: #00ff00; /* Neon green */
+            color: black;
             cursor: pointer;
             padding: 10px;
             width: 100%;
@@ -99,41 +96,44 @@
             transition: background 0.4s ease; /* Smooth transition */
             margin: 5px 0;
         }
-
+        
         .active, .accordion:hover {
-            background-color: #FF6347; /* Light red/orange */
+            background-color: #005700; /* Darker green */
         }
-
+        
         .panel {
             padding: 0 18px;
             display: none;
             overflow: hidden;
-            background-color: #FFFFFF; /* White background for panels */
+            background-color: #111; /* Dark background for panels */
         }
-
+        
         .search-container {
             text-align: center;
             margin-bottom: 20px;
         }
-
+        
         .search-box {
             padding: 10px;
             font-size: 16px;
             width: 80%;
             max-width: 500px;
+            background: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
         }
-
+        
         .code-button {
-            color: #FF4500; /* Darker orange */
+            color: #00ff00; /* Neon green */
             text-decoration: none;
-            border-bottom: 1px dashed #FF4500; /* Dotted underline */
+            border-bottom: 1px dashed #00ff00; /* Dotted underline */
         }
-
+        
         .code-button:hover {
-            color: #FF6347; /* Light red/orange */
-            border-bottom: 1px solid #FF6347; /* Solid underline on hover */
+            color: #005700; /* Darker green */
+            border-bottom: 1px solid #005700; /* Solid underline on hover */
         }
-
+        
         img {
             max-width: 25%; /* Scale image to fit its container */
             height: auto;    /* Maintain aspect ratio */
@@ -142,7 +142,7 @@
         .shining-text {
             font-size: 24px;
             font-weight: bold;
-            color: #1a73e8;
+            color: #00ff00; /* Neon green */
             text-align: center;
             margin-top: 20px;
             animation: shine 2s infinite linear, move 10s infinite linear;
@@ -150,10 +150,10 @@
 
         @keyframes shine {
             0% {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1a73e8, 0 0 40px #1a73e8, 0 0 50px #1a73e8, 0 0 60px #1a73e8, 0 0 70px #1a73e8;
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
             }
             100% {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1a73e8, 0 0 40px #1a73e8, 0 0 50px #1a73e8, 0 0 60px #1a73e8, 0 0 70px #1a73e8;
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
             }
         }
 
