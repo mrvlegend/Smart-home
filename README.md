@@ -500,9 +500,9 @@
                 <li>Troubleshoot any issues by checking sensor connections and power supply.</li>
             </ul>
         </div>
-        <div class="shining-text">by_mr_vlegend</div>
+        
     </div>
-   
+    <div class="shining-text">by_mr_vlegend</div>
     <script>
         // JavaScript for Accordion functionality
         var acc = document.getElementsByClassName("accordion");
