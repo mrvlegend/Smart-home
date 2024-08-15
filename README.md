@@ -169,6 +169,7 @@
         <div id="projectID" class="section">
               <h2 class="project-title">Obstacle Avoiding Car</h2>
     <p>This project demonstrates an obstacle-avoiding car using Arduino and ultrasonic sensors.</p>
+    <center>  <img src="https://tse3.mm.bing.net/th?id=OIP.W3P9NOkoZ2SCvHHdEOOa8gHaEK&pid=Api&P=0&h=220" alt="Line Following Robot Diagram"></center>
 
     <button class="accordion">Components Needed</button>
     <div class="panel">
