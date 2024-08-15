@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Projects Showcase</title>
-   <style>
+    <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace; /* Monospace font for hacker feel */
             margin: 0;
             background: black; /* Solid black background for hacker theme */
-            color: #ff00ff; /* Green text to simulate classic hacker aesthetics */
-            animation: backgroundAnimation 10s infinite linear; /* Animation for background */
+            color: #ff69b4; /* Neon pink text for classic hacker aesthetics */
+            animation: backgroundAnimation 15s infinite linear; /* Animation for background */
         }
 
         @keyframes backgroundAnimation {
             0% { background-color: black; }
-            50% { background-color: #002b36; }
+            50% { background-color: #1e1e1e; }
             100% { background-color: black; }
         }
 
         header {
-            background-color: #00ff00; /* Neon green */
+            background-color: #ff69b4; /* Neon pink */
             color: black;
             padding: 15px 0;
             text-align: center;
@@ -30,6 +30,7 @@
             top: 0;
             left: 0;
             z-index: 1000; /* Ensure header stays on top */
+            border-bottom: 2px solid #ff1493; /* Deep neon pink border at the bottom */
         }
         
         header img {
@@ -40,8 +41,9 @@
         nav {
             display: flex;
             justify-content: center;
-            background: #00ff00; /* Neon green */
+            background: #ff69b4; /* Neon pink */
             margin-top: 60px; /* Space for fixed header */
+            border-bottom: 2px solid #ff1493; /* Deep neon pink border at the bottom */
         }
         
         nav a {
@@ -51,10 +53,15 @@
             text-align: center;
             font-size: 16px;
             transition: background 0.3s; /* Smooth transition */
+            border-left: 1px solid #ff1493; /* Deep neon pink border between links */
+        }
+        
+        nav a:first-child {
+            border-left: none; /* Remove left border from the first link */
         }
         
         nav a:hover {
-            background: #005700; /* Darker green for hover effect */
+            background: #ff1493; /* Deep neon pink for hover effect */
         }
         
         .container {
@@ -66,12 +73,13 @@
         
         .section {
             margin-bottom: 20px;
-            background: #111; /* Dark background for sections */
-            color: #00ff00; /* Green text for contrast */
+            background: #222; /* Dark background for sections */
+            color: #ff69b4; /* Neon pink text for contrast */
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(255, 105, 180, 0.5); /* Neon pink shadow */
             transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            border: 2px solid #ff1493; /* Deep neon pink border */
         }
         
         .section:hover {
@@ -79,17 +87,17 @@
         }
         
         .project-title {
-            color: #00ff00; /* Neon green */
+            color: #ff69b4; /* Neon pink */
             margin-top: 0;
         }
         
         .accordion {
-            background-color: #00ff00; /* Neon green */
+            background-color: #ff69b4; /* Neon pink */
             color: black;
             cursor: pointer;
             padding: 10px;
             width: 100%;
-            border: none;
+            border: 2px solid #ff1493; /* Deep neon pink border */
             text-align: left;
             outline: none;
             font-size: 16px;
@@ -98,14 +106,14 @@
         }
         
         .active, .accordion:hover {
-            background-color: #005700; /* Darker green */
+            background-color: #ff1493; /* Deep neon pink */
         }
         
         .panel {
             padding: 0 18px;
             display: none;
             overflow: hidden;
-            background-color: #111; /* Dark background for panels */
+            background-color: #222; /* Dark background for panels */
         }
         
         .search-container {
@@ -119,30 +127,33 @@
             width: 80%;
             max-width: 500px;
             background: black;
-            color: #00ff00;
-            border: 1px solid #00ff00;
+            color: #ff69b4;
+            border: 2px solid #ff1493; /* Deep neon pink border */
+            border-radius: 5px;
         }
         
         .code-button {
-            color: #00ff00; /* Neon green */
+            color: #ff69b4; /* Neon pink */
             text-decoration: none;
-            border-bottom: 1px dashed #00ff00; /* Dotted underline */
+            border-bottom: 1px dashed #ff69b4; /* Dotted underline */
         }
         
         .code-button:hover {
-            color: #005700; /* Darker green */
-            border-bottom: 1px solid #005700; /* Solid underline on hover */
+            color: #ff1493; /* Deep neon pink */
+            border-bottom: 1px solid #ff1493; /* Solid underline on hover */
         }
         
         img {
             max-width: 25%; /* Scale image to fit its container */
             height: auto;    /* Maintain aspect ratio */
+            border: 2px solid #ff1493; /* Deep neon pink border around images */
+            border-radius: 5px; /* Optional rounded corners */
         }
 
         .shining-text {
             font-size: 24px;
             font-weight: bold;
-            color: #00ff00; /* Neon green */
+            color: #ff69b4; /* Neon pink */
             text-align: center;
             margin-top: 20px;
             animation: shine 2s infinite linear, move 10s infinite linear;
@@ -150,10 +161,10 @@
 
         @keyframes shine {
             0% {
-                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+                text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4;
             }
             100% {
-                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+                text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4;
             }
         }
 
