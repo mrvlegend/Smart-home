@@ -220,51 +220,10 @@
             </li>
         </ul>
     </div>
-
-    <!-- Adding an example image related to obstacle avoidance -->
-    <h3>Obstacle Avoidance Diagram</h3>
-
-            <button class="accordion">Arduino Code</button>
+    <button class="accordion">Arduino Code</button>
             <div class="panel">
                 <p>The Arduino code for this project. <a href="https://github.com/mrvlegend/line-follwer.git" class="code-button" target="_blank">View Code</a></p>
             </div>
-
-             <button class="accordion">Connections</button>
-    <div class="panel">
-        <p>Instructions for connecting the components are detailed below.</p>
-        <ul>
-            <li>Motor Connections:
-                <ul>
-                    <li>Connect the DC motors to the Motor Driver Module.</li>
-                    <li>Connect the motor driver inputs to the Arduino digital pins.</li>
-                </ul>
-            </li>
-            <li>Ultrasonic Sensor Connections:
-                <ul>
-                    <li>Connect the VCC of the sensor to the 5V pin on the Arduino.</li>
-                    <li>Connect the GND of the sensor to the GND pin on the Arduino.</li>
-                    <li>Connect the TRIG pin of the sensor to a digital pin on the Arduino (e.g., pin 6).</li>
-                    <li>Connect the ECHO pin of the sensor to a digital pin on the Arduino (e.g., pin 7).</li>
-                </ul>
-            </li>
-            <li>Power Connections:
-                <ul>
-                    <li>Power the Arduino from a suitable battery pack.</li>
-                    <li>Ensure the motor driver and sensors are powered correctly.</li>
-                </ul>
-            </li>
-            <li>Motor Driver Module Pins:
-                <ul>
-                    <li>Motor A:</li>
-                    <li>IN1 to Arduino pin 2</li>
-                    <li>IN2 to Arduino pin 3</li>
-                    <li>Motor B:</li>
-                    <li>IN3 to Arduino pin 4</li>
-                    <li>IN4 to Arduino pin 5</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
 
     <button class="accordion">Using the System</button>
     <div class="panel">
