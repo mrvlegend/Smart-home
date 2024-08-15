@@ -357,7 +357,8 @@
             </div>
             <button class="accordion">Arduino Code</button>
             <div class="panel">
-                <p>The Arduino code for this project. <a href="#" class="code-button" target="_blank">View Code</a></p>
+                <p>The Arduino code for this project. <a href="https://github.com/mrvlegend/line-follwer.git" class="code-button" target="_blank">View Code</a></p>
+                <img src="https://your-image-url.com/logo.png" alt="Your Logo">
             </div>
 
             <button class="accordion">Using the System</button>
