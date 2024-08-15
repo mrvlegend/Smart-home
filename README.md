@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Projects Showcase</title>
-    <style>
+   <style>
         body {
             font-family: 'Courier New', Courier, monospace; /* Monospace font for hacker feel */
             margin: 0;
             background: black; /* Solid black background for hacker theme */
-            color: #00ff00; /* Neon green text for classic hacker aesthetics */
+            color: #ffa500; /* Neon orange text */
             animation: backgroundAnimation 15s infinite linear; /* Animation for background */
         }
 
         @keyframes backgroundAnimation {
             0% { background-color: black; }
-            50% { background-color: #002b36; }
+            50% { background-color: #1e1e1e; }
             100% { background-color: black; }
         }
 
         header {
-            background-color: #00ff00; /* Neon green */
+            background-color: #ffa500; /* Neon orange */
             color: black;
             padding: 15px 0;
             text-align: center;
@@ -30,7 +30,7 @@
             top: 0;
             left: 0;
             z-index: 1000; /* Ensure header stays on top */
-            border-bottom: 2px solid #005700; /* Deep green border at the bottom */
+            border-bottom: 2px solid #ff8c00; /* Deep neon orange border at the bottom */
         }
         
         header img {
@@ -41,9 +41,9 @@
         nav {
             display: flex;
             justify-content: center;
-            background: #00ff00; /* Neon green */
+            background: #ffa500; /* Neon orange */
             margin-top: 60px; /* Space for fixed header */
-            border-bottom: 2px solid #005700; /* Deep green border at the bottom */
+            border-bottom: 2px solid #ff8c00; /* Deep neon orange border at the bottom */
         }
         
         nav a {
@@ -53,7 +53,7 @@
             text-align: center;
             font-size: 16px;
             transition: background 0.3s; /* Smooth transition */
-            border-left: 1px solid #005700; /* Deep green border between links */
+            border-left: 1px solid #ff8c00; /* Deep neon orange border between links */
         }
         
         nav a:first-child {
@@ -61,7 +61,7 @@
         }
         
         nav a:hover {
-            background: #005700; /* Deep green for hover effect */
+            background: #ff8c00; /* Deep neon orange for hover effect */
         }
         
         .container {
@@ -73,13 +73,13 @@
         
         .section {
             margin-bottom: 20px;
-            background: #111; /* Dark background for sections */
-            color: #00ff00; /* Neon green text for contrast */
+            background: #222; /* Dark background for sections */
+            color: #ffa500; /* Neon orange text for contrast */
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(255, 165, 0, 0.5); /* Neon orange shadow */
             transition: transform 0.3s ease; /* Smooth transition for hover effect */
-            border: 2px solid #005700; /* Deep green border */
+            border: 2px solid #ff8c00; /* Deep neon orange border */
         }
         
         .section:hover {
@@ -87,17 +87,17 @@
         }
         
         .project-title {
-            color: #00ff00; /* Neon green */
+            color: #ffa500; /* Neon orange */
             margin-top: 0;
         }
         
         .accordion {
-            background-color: #00ff00; /* Neon green */
+            background-color: #ffa500; /* Neon orange */
             color: black;
             cursor: pointer;
             padding: 10px;
             width: 100%;
-            border: 2px solid #005700; /* Deep green border */
+            border: 2px solid #ff8c00; /* Deep neon orange border */
             text-align: left;
             outline: none;
             font-size: 16px;
@@ -106,14 +106,14 @@
         }
         
         .active, .accordion:hover {
-            background-color: #005700; /* Deep green */
+            background-color: #ff8c00; /* Deep neon orange */
         }
         
         .panel {
             padding: 0 18px;
             display: none;
             overflow: hidden;
-            background-color: #111; /* Dark background for panels */
+            background-color: #222; /* Dark background for panels */
         }
         
         .search-container {
@@ -127,33 +127,33 @@
             width: 80%;
             max-width: 500px;
             background: black;
-            color: #00ff00;
-            border: 2px solid #005700; /* Deep green border */
+            color: #ffa500;
+            border: 2px solid #ff8c00; /* Deep neon orange border */
             border-radius: 5px;
         }
         
         .code-button {
-            color: #00ff00; /* Neon green */
+            color: #ffa500; /* Neon orange */
             text-decoration: none;
-            border-bottom: 1px dashed #00ff00; /* Dotted underline */
+            border-bottom: 1px dashed #ffa500; /* Dotted underline */
         }
         
         .code-button:hover {
-            color: #005700; /* Deep green */
-            border-bottom: 1px solid #005700; /* Solid underline on hover */
+            color: #ff8c00; /* Deep neon orange */
+            border-bottom: 1px solid #ff8c00; /* Solid underline on hover */
         }
         
         img {
             max-width: 25%; /* Scale image to fit its container */
             height: auto;    /* Maintain aspect ratio */
-            border: 2px solid #005700; /* Deep green border around images */
+            border: 2px solid #ff8c00; /* Deep neon orange border around images */
             border-radius: 5px; /* Optional rounded corners */
         }
 
         .shining-text {
             font-size: 24px;
             font-weight: bold;
-            color: #00ff00; /* Neon green */
+            color: #ffa500; /* Neon orange */
             text-align: center;
             margin-top: 20px;
             animation: shine 2s infinite linear, move 10s infinite linear;
@@ -161,10 +161,10 @@
 
         @keyframes shine {
             0% {
-                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+                text-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ffa500, 0 0 50px #ffa500, 0 0 60px #ffa500, 0 0 70px #ffa500;
             }
             100% {
-                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+                text-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ffa500, 0 0 50px #ffa500, 0 0 60px #ffa500, 0 0 70px #ffa500;
             }
         }
 
