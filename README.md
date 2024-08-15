@@ -149,7 +149,7 @@
 </head>
 <body>
     <header>
-        <img src="https://your-image-url.com/logo.png" alt="Your Logo">
+        
         <h1>Arduino Projects By Mr_vlegend</h1>
     </header>
 
@@ -315,12 +315,14 @@
                     <li>Line sensors</li>
                     <li>Batteries</li>
                 </ul>
+                <img src="https://i.ytimg.com/vi/t7k9D1jDEtk/maxresdefault.jpg" alt="Line Following Robot Diagram">
             </div>
 
             <button class="accordion">Connections</button>
             <div class="panel">
                 <ul>
-                    <li>Motor Connections:
+                
+                 <li>Motor Connections:
                         <ul>
                             <li>Connect the DC motors to the Motor Driver Module.</li>
                             <li>Connect the motor driver inputs to the Arduino digital pins.</li>
@@ -358,7 +360,7 @@
             <button class="accordion">Arduino Code</button>
             <div class="panel">
                 <p>The Arduino code for this project. <a href="https://github.com/mrvlegend/line-follwer.git" class="code-button" target="_blank">View Code</a></p>
-                <img src="https://your-image-url.com/logo.png" alt="Your Logo">
+              
             </div>
 
             <button class="accordion">Using the System</button>
