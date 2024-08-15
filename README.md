@@ -314,9 +314,42 @@
 
             <button class="accordion">Connections</button>
             <div class="panel">
-                <p>Connections instructions go here.</p>
+                <ul>
+                    <li>Motor Connections:
+                        <ul>
+                            <li>Connect the DC motors to the Motor Driver Module.</li>
+                            <li>Connect the motor driver inputs to the Arduino digital pins.</li>
+                        </ul>
+                    </li>
+                    <li>Sensor Connections:
+                        <ul>
+                            <li>Connect the line sensors' output to the Arduino analog or digital pins.</li>
+                        </ul>
+                    </li>
+                    <li>Power Connections:
+                        <ul>
+                            <li>Power the Arduino from a suitable battery pack.</li>
+                            <li>Ensure the motor driver is powered correctly.</li>
+                        </ul>
+                    </li>
+                    <li>Motor Driver Module Pins:
+                        <ul>
+                            <li>Motor A:</li>
+                            <li>IN1 to Arduino pin 2</li>
+                            <li>IN2 to Arduino pin 3</li>
+                            <li>Motor B:</li>
+                            <li>IN3 to Arduino pin 4</li>
+                            <li>IN4 to Arduino pin 5</li>
+                        </ul>
+                    </li>
+                    <li>Line Sensors:
+                        <ul>
+                            <li>Left Sensor: Analog pin A0</li>
+                            <li>Right Sensor: Analog pin A1</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-
             <button class="accordion">Arduino Code</button>
             <div class="panel">
                 <p>The Arduino code for this project. <a href="#" class="code-button" target="_blank">View Code</a></p>
