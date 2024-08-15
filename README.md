@@ -320,7 +320,7 @@
                     <li>Line sensors</li>
                     <li>Batteries</li>
                 </ul>
-              <center>  <img src="https://i.ytimg.com/vi/t7k9D1jDEtk/maxresdefault.jpg" alt="Line Following Robot Diagram"></center>
+              <center><img src="https://i.ytimg.com/vi/t7k9D1jDEtk/maxresdefault.jpg" alt="Line Following Robot Diagram"></center>
             </div>
 
             <button class="accordion">Connections</button>
@@ -374,7 +374,89 @@
             </div>
         </div>
 
-        <!-- Add more project sections here by copying and updating the template -->
+      <div id="atomicParkingCar" class="section">
+        <h2 class="project-title">Atomic Parking Car</h2>
+        <img src="https://example.com/atomic-parking-car-diagram.jpg" alt="Atomic Parking Car Diagram" style="width: 300px; height: auto;">
+
+        <p>This project demonstrates an advanced parking car using Arduino with ultrasonic and proximity sensors.</p>
+
+        <button class="accordion">Components Needed</button>
+        <div class="panel">
+            <ul>
+                <li>Arduino board (e.g., Arduino Uno)</li>
+                <li>Motor driver module</li>
+                <li>Two DC motors</li>
+                <li>Ultrasonic distance sensors</li>
+                <li>Proximity sensors</li>
+                <li>Battery pack</li>
+                <li>Jumper wires</li>
+                <li>Chassis (to mount the components)</li>
+            </ul>
+            <center><img src="https://example.com/atomic-parking-car-diagram.jpg" alt="Atomic Parking Car Diagram" class="small-img"></center>
+        </div>
+
+        <button class="accordion">Connections</button>
+        <div class="panel">
+            <ul>
+                <li>Motor Connections:
+                    <ul>
+                        <li>Connect the DC motors to the Motor Driver Module.</li>
+                        <li>Connect the motor driver inputs to the Arduino digital pins.</li>
+                    </ul>
+                </li>
+                <li>Sensor Connections:
+                    <ul>
+                        <li>Connect the ultrasonic distance sensors to the Arduino pins.</li>
+                        <li>Connect the proximity sensors to the Arduino pins.</li>
+                    </ul>
+                </li>
+                <li>Power Connections:
+                    <ul>
+                        <li>Power the Arduino from a suitable battery pack.</li>
+                        <li>Ensure the motor driver and sensors are powered correctly.</li>
+                    </ul>
+                </li>
+                <li>Motor Driver Module Pins:
+                    <ul>
+                        <li>Motor A:</li>
+                        <li>IN1 to Arduino pin 2</li>
+                        <li>IN2 to Arduino pin 3</li>
+                        <li>Motor B:</li>
+                        <li>IN3 to Arduino pin 4</li>
+                        <li>IN4 to Arduino pin 5</li>
+                    </ul>
+                </li>
+                <li>Ultrasonic Sensors:
+                    <ul>
+                        <li>Front Sensor: Trigger pin to Arduino pin 6, Echo pin to Arduino pin 7</li>
+                        <li>Rear Sensor: Trigger pin to Arduino pin 8, Echo pin to Arduino pin 9</li>
+                    </ul>
+                </li>
+                <li>Proximity Sensors:
+                    <ul>
+                        <li>Front Proximity Sensor: Analog pin A0</li>
+                        <li>Rear Proximity Sensor: Analog pin A1</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion">Arduino Code</button>
+        <div class="panel">
+            <p>The Arduino code for this project. <a href="https://github.com/yourusername/atomic-parking-car.git" class="code-button" target="_blank">View Code</a></p>
+        </div>
+
+        <button class="accordion">Using the System</button>
+        <div class="panel">
+            <p>Instructions on how to use the system:</p>
+            <ul>
+                <li>Power on the atomic parking car.</li>
+                <li>Place the car in an open space or parking area.</li>
+                <li>Observe the car as it uses sensors to detect obstacles and navigate.</li>
+                <li>Adjust the sensor thresholds or motor controls if needed.</li>
+                <li>Troubleshoot any issues by checking sensor connections and power supply.</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
