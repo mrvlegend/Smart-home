@@ -15,7 +15,7 @@
         }
 
         @keyframes backgroundAnimation {
-            0% { background-color: black; }
+            0% { background-color: white; }
             50% { background-color: #1e1e1e; }
             100% { background-color: black; }
         }
